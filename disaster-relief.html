@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disaster Relief | Lakshya Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+ <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+          <div class="header-left">
+    
+    <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    <div class="logo-text">
+      <img src="assets/logo2.png" alt="Lakshya Foundation Text">
+    </div>
+
+  </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+  <ul class="nav-menu" id="navMenu">
+
+    <li>
+      <a href="index.html" class="nav-link active" data-i18n="nav_home">
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html" class="nav-link" data-i18n="nav_about">
+        About Us
+      </a>
+    </li>
+
+    <li class="has-mega-menu">
+      <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">
+        Our Work
+      </a>
+
+      <div class="mega-menu">
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
+          <ul class="mega-menu-links">
+            <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
+            <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
+            <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
+            <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_development_areas">Development Areas</h4>
+          <ul class="mega-menu-links">
+            <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
+            <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
+            <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
+            <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
+          <ul class="mega-menu-links">
+            <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
+            <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
+            <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
+            <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_get_involved">Get Involved</h4>
+          <ul class="mega-menu-links">
+            <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
+            <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </li>
+
+    <li>
+      <a href="programs.html" class="nav-link" data-i18n="nav_programs">
+        Programs
+      </a>
+    </li>
+
+    <li>
+      <a href="impact.html" class="nav-link" data-i18n="nav_impact">
+        Impact
+      </a>
+    </li>
+
+    <li>
+      <a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">
+        Get Involved
+      </a>
+    </li>
+
+    <li>
+      <a href="transparency.html" class="nav-link" data-i18n="nav_transparency">
+        Transparency
+      </a>
+    </li>
+
+    <li>
+      <a href="contact.html" class="nav-link" data-i18n="nav_contact">
+        Contact Us
+      </a>
+    </li>
+
+    <li class="lang-item">
+      <button type="button" id="langToggle" data-i18n="nav_language">
+        Languages
+      </button>
+
+      <ul class="lang-menu">
+        <li data-lang="en">English</li>
+        <li data-lang="hi">हिंदी</li>
+        <li data-lang="mr">मराठी</li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
+        </div>
+
+
+    </header>
+<div id="google_translate_element" style="padding:10px;"></div>
+
+  <!-- HERO -->
+  <section class="section disaster-hero">
+    <div class="container two-col">
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80"
+          alt="Disaster relief and emergency support">
+      </div>
+
+      <div class="hero-content">
+        <h1>Rapid Relief.<br>Stronger Recovery.</h1>
+
+        <p>
+          Lakshya Foundation responds quickly during disasters with emergency relief,
+          medical support, and rehabilitation—helping families recover with dignity.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#disaster-programs" class="btn btn-primary">
+            Our Disaster Relief Work
+          </a>
+          <a href="#volunteer" class="btn btn-outline">
+            Join as a Volunteer
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section disaster-intro">
+    <div class="container two-col">
+
+      <div class="content">
+        <h2>Supporting Communities Before, During & After Disasters</h2>
+
+        <p class="lead">
+          Natural disasters disrupt lives in seconds. We work to provide rapid emergency aid,
+          essential supplies, and support systems to help communities recover and rebuild.
+        </p>
+
+        <p>
+          Our disaster response focuses on immediate relief (food, water, shelter, medical aid),
+          followed by rehabilitation initiatives such as livelihood support, rebuilding essentials,
+          and community preparedness.
+        </p>
+
+        <ul class="impact-list">
+          <li>Emergency food, water & relief kits</li>
+          <li>Medical camps and urgent care support</li>
+          <li>Rehabilitation and long-term recovery</li>
+        </ul>
+
+        <a href="#disaster-programs" class="btn btn-primary">Our Disaster Relief Work</a>
+        <a href="#volunteer" class="btn btn-outline">Join as a Volunteer</a>
+      </div>
+
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=1200&q=80"
+          alt="Emergency relief distribution"
+          loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="section bg-light" id="disaster-programs">
+    <div class="container">
+      <h2 class="center">Key Programs</h2>
+
+      <div class="cards icon-cards">
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <h3>Relief Kit Distribution</h3>
+          <p>
+            Essential relief kits including food, water, hygiene items, blankets,
+            and basic supplies for affected families.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-truck-medical"></i>
+          </div>
+          <h3>Emergency Medical Support</h3>
+          <p>
+            First-aid, medical camps, medicines, and referrals for urgent cases
+            during and after disasters.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+          <h3>Rehabilitation & Recovery</h3>
+          <p>
+            Helping families rebuild essential needs through shelter support,
+            livelihood restoration, and community recovery efforts.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section light impact-section">
+    <div class="container">
+
+      <h2 class="section-title">How We Work</h2>
+
+      <p class="section-subtitle">
+        <br>
+        Our disaster response is fast, coordinated, transparent, and focused on saving lives and restoring dignity.
+      </p>
+
+      <div class="grid-4 how-we-work">
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h4>Rapid Assessment</h4>
+          <p>
+            We assess damage and urgent needs through field teams and local coordination.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-boxes-stacked"></i>
+          </div>
+          <h4>Relief Mobilization</h4>
+          <p>
+            Procurement and distribution of essential relief supplies based on priority.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-notes-medical"></i>
+          </div>
+          <h4>Medical & Safety Support</h4>
+          <p>
+            Medical camps, emergency referrals, and health support for affected families.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h4>Recovery & Rehabilitation</h4>
+          <p>
+            Long-term support to rebuild livelihoods, homes, and community stability.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section impact-section" id="impact">
+    <div class="container">
+      <h2 class="center">Our Impact</h2>
+      <p class="center impact-subtitle">
+        Measurable change delivered through emergency response and recovery efforts
+      </p>
+
+      <div class="impact-stats">
+
+        <div class="stat">
+          <h3><span class="counter" data-target="20000">0</span>+</h3>
+          <p>People Supported During Disasters</p>
+        </div>
+
+        <div class="stat">
+          <h3><span class="counter" data-target="500">0</span>+</h3>
+          <p>Relief Drives Conducted</p>
+        </div>
+
+        <div class="stat">
+          <h3><span class="counter" data-target="75">0</span>%</h3>
+          <p>Faster Access to Essential Supplies</p>
+        </div>
+
+        <div class="stat stat-center">
+          <h3><span class="counter" data-target="60">0</span>%</h3>
+          <p>Improvement in Community Recovery Readiness</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AREAS WE SERVE -->
+  <section class="section impact-section light">
+    <div class="container">
+
+      <h2 class="section-title">Areas We Serve</h2>
+
+      <p class="section-subtitle">
+        <br>
+        We respond to disasters and emergencies across affected regions with local partnerships and rapid action.
+      </p>
+
+      <div class="grid-4 areas-serve">
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h4>Emergency Zones</h4>
+          <p>
+            Rapid deployment to flood, drought, cyclone, and disaster-affected locations.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-city"></i>
+          </div>
+          <h4>District-Level Response</h4>
+          <p>
+            Working with district authorities and local bodies for coordinated support.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-people-group"></i>
+          </div>
+          <h4>Vulnerable Families</h4>
+          <p>
+            Focus on children, women, elderly, and low-income households in crisis.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4>Relief Partnerships</h4>
+          <p>
+            Collaborating with community leaders, NGOs, and supporters for fast response.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 1 -->
+  <section class="section impact-section">
+    <div class="container two-col">
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=1200&q=80"
+          alt="Relief kit distribution">
+      </div>
+
+      <div class="content-wrap">
+        <h2>Emergency Relief Distribution</h2>
+
+        <p class="lead-text">
+          When disaster strikes, immediate support saves lives. Our relief teams distribute
+          food, water, hygiene kits, blankets, and essentials to affected families.
+        </p>
+
+        <ul class="check-list">
+          <li><strong>Food & Water</strong> distribution for urgent needs</li>
+          <li><strong>Hygiene Kits</strong> to prevent disease outbreaks</li>
+          <li><strong>Blankets & Shelter Support</strong> for displaced families</li>
+          <li><strong>Special Support</strong> for children, women, and elderly</li>
+        </ul>
+
+        <p class="impact-note">
+          We ensure fair distribution with transparency and community coordination.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 2 -->
+  <section class="section light impact-section">
+    <div class="container two-col reverse">
+
+      <div class="content-wrap">
+        <h2>Recovery & Rehabilitation</h2>
+
+        <p class="lead-text">
+          Recovery takes time. After immediate relief, we help families rebuild essential needs,
+          restore livelihoods, and strengthen community preparedness for future emergencies.
+        </p>
+
+        <ul class="icon-list">
+          <li>
+            <i class="fas fa-house-chimney"></i>
+            <span><strong>Basic Shelter Support</strong> and essential restoration</span>
+          </li>
+
+          <li>
+            <i class="fas fa-briefcase"></i>
+            <span><strong>Livelihood Recovery</strong> through tools and support linkage</span>
+          </li>
+
+          <li>
+            <i class="fas fa-heart-pulse"></i>
+            <span><strong>Health Follow-ups</strong> to prevent post-disaster disease</span>
+          </li>
+
+          <li>
+            <i class="fas fa-triangle-exclamation"></i>
+            <span><strong>Preparedness Training</strong> for future disaster readiness</span>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80"
+          alt="Community recovery after disaster">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BOX -->
+  <section class="section cta-section">
+    <div class="container cta-box">
+
+      <h2>Support Disaster Relief Efforts</h2>
+
+      <p>
+        Your support helps us respond quickly with life-saving aid and long-term recovery support for affected communities.
+      </p>
+
+      <div class="cta-actions">
+        <a href="#donate" class="btn primary-btn">Donate Now</a>
+        <a href="#volunteer" class="btn outline-btn">Become a Volunteer</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section light impact-section">
+    <div class="container">
+
+      <h2 class="section-title">Disaster Relief in Action</h2>
+
+      <p class="section-subtitle">
+        <br>
+        Watch glimpses of our emergency response and community recovery initiatives.
+      </p>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/cM7HjD8zJzM"
+          title="Disaster Relief Program"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="stories-section">
+    <div class="container">
+
+      <h2>Stories of Change</h2>
+      <p>
+        Behind every response is a family that received help during their hardest time.
+      </p>
+
+      <div class="story-grid">
+
+        <div class="story-card">
+          <p>
+            “After the floods, we had nothing left. The relief kits and medical support helped us survive the first days.
+            We are grateful for the support and care.”
+          </p>
+          <h4>— Shanta, Survivor</h4>
+        </div>
+
+        <div class="story-card">
+          <p>
+            “The team reached our village quickly with essentials. Their help gave us hope and strength to rebuild.”
+          </p>
+          <h4>— Irfan, Community Member</h4>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title">Disaster Relief Gallery</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto 40px; color:#666;">
+        <br>
+        Moments from our disaster relief work including emergency distribution, medical camps, and rehabilitation support.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=1200&q=80" alt="Relief distribution">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80" alt="Emergency support">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=1200&q=80" alt="Medical support">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80" alt="Recovery work">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=1200&q=80" alt="Community help">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80" alt="Volunteer relief team">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=1200&q=80" alt="Relief supplies">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80" alt="Disaster support initiative">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container center">
+      <h2>Support Our Disaster Relief Mission</h2>
+      <p>Your support helps deliver emergency aid and long-term recovery to families in crisis.</p>
+      <button id="donateBtn">Donate Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+              <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    
+                <div class="footer-column">
+                    <!-- <h3>Lakshya Foundation</h3> -->
+                    <p>Empowering communities through sustainable development initiatives across 12 key sectors. Registered under the Maharashtra Public Trusts Act, 1950.</p>
+                    <p style="margin-top: 15px;"><strong>Registration:</strong> F-15079</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Sectors</h3>
+                    <ul class="footer-links">
+                        <li><a href="#education">Education & Literacy</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#women">Women Empowerment</a></li>
+                        <li><a href="#child">Child Welfare</a></li>
+                        <li><a href="#rural">Rural Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Get Involved</h3>
+                    <ul class="footer-links">
+                        <li><a href="#donate">Donate Now</a></li>
+                        <li><a href="#volunteer">Volunteer With Us</a></li>
+                        <li><a href="#partner">Partner With Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#fundraise">Fundraise for a Cause</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Transparency</h3>
+                    <ul class="footer-links">
+                        <li><a href="#financials">Financial Statements</a></li>
+                        <li><a href="#annual-reports">Annual Reports</a></li>
+                        <li><a href="#policies">Policies & Disclosures</a></li>
+                        <li><a href="#legal">Legal & Registration</a></li>
+                        <li><a href="#grievance">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
+               <p class="footer-credit">
+  Designed & Developed by 
+  <a href="https://omnigross.in" target="_blank" rel="noopener">
+    Omnigross
+  </a>
+ 
+</p>
+
+            </div>
+        </div>
+    </footer>
+
+    
+       
+   <div id="google_translate_element"></div>
+
+  <!-- JS -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    let started = false;
+
+    function startCount() {
+      if (started) return;
+      started = true;
+
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 200;
+
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const section = document.querySelector('.impact-section');
+      const sectionTop = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (sectionTop < screenHeight - 100) {
+        startCount();
+      }
+    });
+
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+      this.querySelector('i').classList.toggle('fa-bars');
+      this.querySelector('i').classList.toggle('fa-times');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('navMenu').classList.remove('active');
+        document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+        document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Detail | Lakshya Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery-bundle.min.css">
+     <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --dark-red: #b71c1c;
+            --light-red: #ff6659;
+            --light-bg: #f9f9f9;
+            --dark-gray: #333;
+            --medium-gray: #666;
+            --light-gray: #eee;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--dark-red);
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--primary-red);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-red);
+            color: var(--primary-red);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-red);
+            color: var(--white);
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            height: 60px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-red);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary-red);
+            cursor: pointer;
+        }
+        
+        /* Program Header */
+        .program-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .program-code {
+            display: inline-block;
+            background-color: rgba(211, 47, 47, 0.9);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .program-header h1 {
+            color: var(--white);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .program-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .meta-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .meta-value {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        /* Program Sections */
+        .program-section {
+            padding: 60px 20px;
+        }
+        
+        .section-alt {
+            background-color: var(--light-bg);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .section-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-red);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .section-title {
+            margin-bottom: 0;
+        }
+        
+        .section-content {
+            padding-left: 55px;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        /* Problem Statement Box */
+        .problem-box {
+            background-color: #fff5f5;
+            border-left: 4px solid var(--primary-red);
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        
+        /* Objectives List */
+        .objectives-list {
+            list-style: none;
+        }
+        
+        .objectives-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .objectives-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-red);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Beneficiary Cards */
+        .beneficiary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .beneficiary-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .beneficiary-icon {
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+        }
+        
+        /* Map Container */
+        .map-container {
+            height: 400px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1494&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+        }
+        
+        /* SDG Badges */
+        .sdg-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .sdg-badge {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            gap: 10px;
+        }
+        
+        .sdg-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-red);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        /* Budget Table */
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .budget-table th, .budget-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .budget-table th {
+            background-color: var(--primary-red);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .budget-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Risk Matrix */
+        .risk-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .risk-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid #f44336;
+        }
+        
+        .risk-card.mitigated {
+            border-left-color: #4caf50;
+        }
+        
+        .risk-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .risk-icon {
+            margin-right: 10px;
+            color: #f44336;
+        }
+        
+        .risk-card.mitigated .risk-icon {
+            color: #4caf50;
+        }
+        
+        /* Success Story */
+        .success-story {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+        
+        .story-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .story-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            margin-right: 15px;
+            background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80');
+            background-size: cover;
+        }
+        
+        /* Media Gallery */
+        .media-gallery {
+            margin-top: 20px;
+        }
+        
+        .gallery-tabs {
+            display: flex;
+            border-bottom: 2px solid var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .gallery-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+        }
+        
+        .gallery-tab.active {
+            color: var(--primary-red);
+            border-bottom: 2px solid var(--primary-red);
+        }
+        
+        .gallery-content {
+            display: none;
+        }
+        
+        .gallery-content.active {
+            display: block;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow);
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            background-color: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(211, 47, 47, 0.9), rgba(183, 28, 28, 0.9)), url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            min-width: 180px;
+        }
+        
+        .cta-btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .cta-btn-secondary:hover {
+            background-color: white;
+            color: var(--primary-red);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-red);
+            bottom: -8px;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .program-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .program-header {
+                padding: 60px 20px;
+            }
+            
+            .program-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .program-meta {
+                gap: 15px;
+            }
+            
+            .section-content {
+                padding-left: 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .program-section {
+                padding: 40px 20px;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .section-number {
+                margin-bottom: 10px;
+            }
+            
+            .beneficiary-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .risk-matrix {
+                grid-template-columns: 1fr;
+            }
+            
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        
+/* LEFT GROUP */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;   /* 👈 CHANGE THIS TO CONTROL SPACE */
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Text logo */
+.logo-text img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-left {
+    gap: 4px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-text img {
+    height: 40px;
+  }
+}
+
+    </style>
+</head>
+<body>
+     <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+          <div class="header-left">
+    
+    <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    <div class="logo-text">
+      <img src="assets/logo2.png" alt="Lakshya Foundation Text">
+    </div>
+
+  </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+  <ul class="nav-menu" id="navMenu">
+
+    <li>
+      <a href="index.html" class="nav-link active" data-i18n="nav_home">
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html" class="nav-link" data-i18n="nav_about">
+        About Us
+      </a>
+    </li>
+
+    <li class="has-mega-menu">
+      <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">
+        Our Work
+      </a>
+
+      <div class="mega-menu">
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
+          <ul class="mega-menu-links">
+            <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
+            <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
+            <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
+            <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_development_areas">Development Areas</h4>
+          <ul class="mega-menu-links">
+            <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
+            <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
+            <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
+            <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
+          <ul class="mega-menu-links">
+            <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
+            <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
+            <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
+            <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_get_involved">Get Involved</h4>
+          <ul class="mega-menu-links">
+            <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
+            <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </li>
+
+    <li>
+      <a href="programs.html" class="nav-link" data-i18n="nav_programs">
+        Programs
+      </a>
+    </li>
+
+    <li>
+      <a href="impact.html" class="nav-link" data-i18n="nav_impact">
+        Impact
+      </a>
+    </li>
+
+    <li>
+      <a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">
+        Get Involved
+      </a>
+    </li>
+
+    <li>
+      <a href="transparency.html" class="nav-link" data-i18n="nav_transparency">
+        Transparency
+      </a>
+    </li>
+
+    <li>
+      <a href="contact.html" class="nav-link" data-i18n="nav_contact">
+        Contact Us
+      </a>
+    </li>
+
+    <li class="lang-item">
+      <button type="button" id="langToggle" data-i18n="nav_language">
+        Languages
+      </button>
+
+      <ul class="lang-menu">
+        <li data-lang="en">English</li>
+        <li data-lang="hi">हिंदी</li>
+        <li data-lang="mr">मराठी</li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
+        </div>
+
+
+    </header>
+<div id="google_translate_element" style="padding:10px;"></div>
+
+    <!-- Program Header -->
+    <section class="program-header">
+        <div class="container">
+            <div class="program-code">HLT-P01</div>
+            <h1>Aarogya Sakhi - Women's Health Initiative</h1>
+            <p class="program-tagline">Mobile healthcare and health awareness program reaching 10,000+ women across rural Maharashtra</p>
+            
+            <div class="program-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Sector</span>
+                    <span class="meta-value">Healthcare & Public Health</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value" style="color: #4caf50;">Active</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Duration</span>
+                    <span class="meta-value">Jan 2021 - Present</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Maharashtra, India</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Program Overview -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h2 class="section-title">Program Overview</h2>
+            </div>
+            <div class="section-content">
+                <p>Aarogya Sakhi is a comprehensive women's health initiative designed to address the critical healthcare gaps faced by women in rural and semi-urban areas of Maharashtra. The program combines mobile healthcare clinics with community-based health education to create a sustainable model for women's healthcare access.</p>
+                <p>Through a network of trained female community health workers (Sakhis), the program provides preventive care, basic treatment, health screenings, and referrals to government healthcare facilities. The initiative focuses on reproductive health, maternal care, nutrition, and non-communicable diseases prevalent among women in the target communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Sector Alignment -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h2 class="section-title">Sector Alignment</h2>
+            </div>
+            <div class="section-content">
+                <div class="sector-alignment">
+                    <div class="sector-badge">
+                        <h3><i class="fas fa-heartbeat"></i> Healthcare & Public Health</h3>
+                        <p>Primary Sector: Healthcare & Public Health</p>
+                        <p>Secondary Alignment: Women Empowerment, Rural Development</p>
+                    </div>
+                    <p>The program directly addresses the healthcare needs of women, contributing to SDG 3 (Good Health and Well-being) and SDG 5 (Gender Equality). By focusing on women's health, we empower them to participate more fully in social and economic life, creating a ripple effect that benefits entire communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Problem Statement -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h2 class="section-title">Problem Statement</h2>
+            </div>
+            <div class="section-content">
+                <div class="problem-box">
+                    <h3>Healthcare Disparity for Rural Women</h3>
+                    <p>Women in rural Maharashtra face significant barriers to healthcare access, including:</p>
+                    <ul>
+                        <li>Limited access to healthcare facilities within 10km radius in 65% of villages</li>
+                        <li>Social and cultural restrictions on women traveling alone to seek healthcare</li>
+                        <li>Lack of awareness about preventive healthcare and nutrition</li>
+                        <li>High maternal mortality rate (MMR) of 46 per 100,000 live births in target districts</li>
+                        <li>Prevalence of anemia among 55% of women in reproductive age group</li>
+                        <li>Low screening rates for breast and cervical cancer (less than 10%)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Program Objectives -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h2 class="section-title">Program Objectives</h2>
+            </div>
+            <div class="section-content">
+                <ul class="objectives-list">
+                    <li>Provide accessible healthcare services to 10,000+ women across 50 villages in Maharashtra</li>
+                    <li>Reduce maternal mortality rate by 30% in target communities within 3 years</li>
+                    <li>Increase awareness of preventive healthcare among 80% of women in target areas</li>
+                    <li>Screen 5,000 women for anemia, breast cancer, and cervical cancer annually</li>
+                    <li>Train 100 local women as community health workers (Aarogya Sakhis)</li>
+                    <li>Establish referral linkages with 10 government healthcare facilities</li>
+                    <li>Reduce prevalence of anemia among target women by 25% through nutrition counseling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Target Beneficiaries -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <h2 class="section-title">Target Beneficiaries</h2>
+            </div>
+            <div class="section-content">
+                <div class="beneficiary-cards">
+                    <div class="beneficiary-card">
+                        <div class="beneficiary-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <h4>Women (15-49 years)</h4>
+                        <p>Women in reproductive age group from economically disadvantaged backgrounds</p>
+                    </div>
+                    <div class="beneficiary-card">
+                        <div class="beneficiary-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h4>Pregnant Women</h4>
+                        <p>Expecting mothers requiring antenatal care and safe delivery support</p>
+                    </div>
+                    <div class="beneficiary-card">
+                        <div class="beneficiary-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h4>Adolescent Girls</h4>
+                        <p>Girls aged 10-19 needing nutrition and reproductive health education</p>
+                    </div>
+                    <div class="beneficiary-card">
+                        <div class="beneficiary-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community Health Workers</h4>
+                        <p>Local women trained to provide basic healthcare and health education</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Geographic Coverage -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">6</div>
+                <h2 class="section-title">Geographic Coverage</h2>
+            </div>
+            <div class="section-content">
+                <p>The Aarogya Sakhi program is implemented across three districts in Maharashtra:</p>
+                <ul>
+                    <li><strong>Pune District:</strong> 20 villages in Purandar and Bhor talukas</li>
+                    <li><strong>Ahmednagar District:</strong> 18 villages in Parner and Sangamner talukas</li>
+                    <li><strong>Satara District:</strong> 12 villages in Patan and Jaoli talukas</li>
+                </ul>
+                
+                <div class="map-container">
+                    <div class="map-overlay">
+                        <h4>Coverage: 50 villages | 3 districts | Population Reach: 50,000+</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Key Activities & Interventions -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">7</div>
+                <h2 class="section-title">Key Activities & Interventions</h2>
+            </div>
+            <div class="section-content two-column">
+                <div>
+                    <h3>Healthcare Services</h3>
+                    <ul>
+                        <li>Mobile clinic visits twice monthly to each village</li>
+                        <li>Basic health check-ups and consultations</li>
+                        <li>Antenatal and postnatal care for pregnant women</li>
+                        <li>Anemia screening and iron-folic acid distribution</li>
+                        <li>Breast and cervical cancer screening camps</li>
+                        <li>Family planning counseling and services</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Community Engagement</h3>
+                    <ul>
+                        <li>Monthly health awareness workshops</li>
+                        <li>Nutrition counseling and cooking demonstrations</li>
+                        <li>Training of community health workers (Sakhis)</li>
+                        <li>Formation and support of women's health groups</li>
+                        <li>Referral support to government healthcare facilities</li>
+                        <li>Health record maintenance for beneficiaries</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Implementation Strategy -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">8</div>
+                <h2 class="section-title">Implementation Strategy</h2>
+            </div>
+            <div class="section-content">
+                <p>The program follows a community-led implementation model:</p>
+                <div class="two-column">
+                    <div>
+                        <h3>Community Mobilization</h3>
+                        <p>Engaging with local leaders, women's self-help groups, and community organizations to build trust and ensure program acceptance. Each village forms a Health Committee comprising local women to guide program implementation.</p>
+                    </div>
+                    <div>
+                        <h3>Capacity Building</h3>
+                        <p>Selecting and training local women as Aarogya Sakhis (community health workers). They receive 3-month training in basic healthcare, health education, data collection, and referral procedures.</p>
+                    </div>
+                </div>
+                <div class="two-column" style="margin-top: 20px;">
+                    <div>
+                        <h3>Service Delivery</h3>
+                        <p>Two mobile healthcare vans equipped with basic diagnostic equipment and medicines visit each village twice a month. Each van is staffed with a doctor, nurse, and community health worker.</p>
+                    </div>
+                    <div>
+                        <h3>Monitoring & Support</h3>
+                        <p>Regular monitoring through digital health records, monthly review meetings, and community feedback sessions. Technical support provided by partner hospitals and healthcare institutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Program Duration & Status -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">9</div>
+                <h2 class="section-title">Program Duration & Status</h2>
+            </div>
+            <div class="section-content">
+                <div class="two-column">
+                    <div>
+                        <h3>Timeline</h3>
+                        <ul>
+                            <li><strong>Program Start:</strong> January 2021</li>
+                            <li><strong>Current Phase:</strong> Phase 3 (Scale-up)</li>
+                            <li><strong>Planned End:</strong> December 2025</li>
+                            <li><strong>Status:</strong> <span style="color: #4caf50; font-weight: 600;">Active</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Progress Summary</h3>
+                        <ul>
+                            <li>Phase 1 (2021): 15 villages, 2,500 beneficiaries</li>
+                            <li>Phase 2 (2022-2023): 30 villages, 6,000 beneficiaries</li>
+                            <li>Phase 3 (2024-2025): 50 villages, 10,000+ beneficiaries</li>
+                            <li><strong>Next Review:</strong> Quarterly review in March 2024</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Impact Metrics & KPIs -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">10</div>
+                <h2 class="section-title">Impact Metrics & KPIs</h2>
+            </div>
+            <div class="section-content">
+                <div class="two-column">
+                    <div>
+                        <h3>Health Outcomes</h3>
+                        <ul>
+                            <li>8,500+ women provided with healthcare services</li>
+                            <li>32% reduction in maternal complications in target villages</li>
+                            <li>45% increase in institutional deliveries</li>
+                            <li>2,800 women screened for breast and cervical cancer</li>
+                            <li>18% reduction in anemia prevalence among beneficiaries</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Program Reach</h3>
+                        <ul>
+                            <li>85 community health workers trained and deployed</li>
+                            <li>50 villages covered across 3 districts</li>
+                            <li>98% beneficiary satisfaction rate</li>
+                            <li>12 government healthcare facilities integrated into referral network</li>
+                            <li>45 women's health groups formed and active</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Monitoring & Evaluation -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">11</div>
+                <h2 class="section-title">Monitoring & Evaluation</h2>
+            </div>
+            <div class="section-content">
+                <p>The program follows a rigorous M&E framework to track progress and outcomes:</p>
+                <div class="two-column">
+                    <div>
+                        <h3>Data Collection</h3>
+                        <ul>
+                            <li>Digital health records for all beneficiaries</li>
+                            <li>Monthly service utilization reports</li>
+                            <li>Quarterly health outcome surveys</li>
+                            <li>Beneficiary feedback through community meetings</li>
+                            <li>Case studies and success stories documentation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Evaluation Framework</h3>
+                        <ul>
+                            <li>Baseline, midline, and endline surveys</li>
+                            <li>Internal quarterly reviews</li>
+                            <li>External evaluation by healthcare partners annually</li>
+                            <li>Cost-effectiveness analysis</li>
+                            <li>Outcome harvesting for qualitative impact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Sustainability & Exit Strategy -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">12</div>
+                <h2 class="section-title">Sustainability & Exit Strategy</h2>
+            </div>
+            <div class="section-content">
+                <div class="two-column">
+                    <div>
+                        <h3>Community Ownership</h3>
+                        <p>Building capacity of local women as health leaders who will continue to provide basic services and health education. Establishing women's health groups that will sustain health awareness activities beyond program duration.</p>
+                    </div>
+                    <div>
+                        <h3>Government Integration</h3>
+                        <p>Aligning program activities with government health programs (NHM, JSY, JSSK) and building referral linkages. Training community health workers to become ASHA or Anganwadi workers in the government system.</p>
+                    </div>
+                </div>
+                <div class="two-column" style="margin-top: 20px;">
+                    <div>
+                        <h3>Financial Sustainability</h3>
+                        <p>Exploring sustainable funding through government health schemes, CSR partnerships, and nominal user fees for non-essential services. Establishing a revolving fund for basic medicines managed by community health committees.</p>
+                    </div>
+                    <div>
+                        <h3>Exit Plan</h3>
+                        <p>Gradual reduction of direct services over 12-month transition period. Handover of mobile clinics to district health departments. Continued technical support and monitoring for 2 years post-exit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Alignment with SDGs / CSR Schedule VII -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">13</div>
+                <h2 class="section-title">Alignment with SDGs & CSR Schedule VII</h2>
+            </div>
+            <div class="section-content">
+                <div class="sdg-badges">
+                    <div class="sdg-badge">
+                        <div class="sdg-number">3</div>
+                        <span>Good Health & Well-being</span>
+                    </div>
+                    <div class="sdg-badge">
+                        <div class="sdg-number">5</div>
+                        <span>Gender Equality</span>
+                    </div>
+                    <div class="sdg-badge">
+                        <div class="sdg-number">10</div>
+                        <span>Reduced Inequalities</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <h3>CSR Schedule VII Compliance</h3>
+                    <p>This program aligns with the following activities under Schedule VII of the Companies Act, 2013:</p>
+                    <ul>
+                        <li>Promoting healthcare including preventive healthcare (Item i)</li>
+                        <li>Eradicating hunger, poverty and malnutrition (Item ii)</li>
+                        <li>Promoting gender equality, empowering women (Item iv)</li>
+                        <li>Contributing to the Prime Minister's National Relief Fund (Item ix)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Partnerships & Stakeholders -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">14</div>
+                <h2 class="section-title">Partnerships & Stakeholders</h2>
+            </div>
+            <div class="section-content">
+                <div class="two-column">
+                    <div>
+                        <h3>Implementation Partners</h3>
+                        <ul>
+                            <li><strong>Government:</strong> District Health Departments, NHM Maharashtra</li>
+                            <li><strong>Healthcare:</strong> Ruby Hall Clinic, Jehangir Hospital</li>
+                            <li><strong>Community:</strong> Village Health Committees, Women's SHGs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Funding Partners</h3>
+                        <ul>
+                            <li><strong>CSR Partners:</strong> Tata Trusts, Reliance Foundation</li>
+                            <li><strong>International:</strong> Bill & Melinda Gates Foundation</li>
+                            <li><strong>Government Schemes:</strong> NHM, State Health Mission</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <h3>Key Stakeholders</h3>
+                    <ul>
+                        <li>Beneficiary women and their families</li>
+                        <li>Community leaders and local government representatives</li>
+                        <li>Healthcare professionals and institutions</li>
+                        <li>Government health department officials</li>
+                        <li>Corporate CSR teams and donors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. Budget Snapshot -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">15</div>
+                <h2 class="section-title">Budget Snapshot (2024-2025)</h2>
+            </div>
+            <div class="section-content">
+                <p><em>Note: Figures are indicative and represent approximate ranges for planning purposes.</em></p>
+                
+                <table class="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Budget Component</th>
+                            <th>Amount (INR)</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Personnel (Doctors, Nurses, Staff)</td>
+                            <td>₹42,00,000</td>
+                            <td>35%</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Clinic Operations & Maintenance</td>
+                            <td>₹24,00,000</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>Medicines & Medical Supplies</td>
+                            <td>₹18,00,000</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>Community Health Worker Training</td>
+                            <td>₹12,00,000</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>Health Awareness & Community Mobilization</td>
+                            <td>₹9,60,000</td>
+                            <td>8%</td>
+                        </tr>
+                        <tr>
+                            <td>Monitoring, Evaluation & Administration</td>
+                            <td>₹7,20,000</td>
+                            <td>6%</td>
+                        </tr>
+                        <tr>
+                            <td>Contingency Fund</td>
+                            <td>₹6,00,000</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Budget (2 Years)</strong></td>
+                            <td><strong>₹1,20,00,000</strong></td>
+                            <td><strong>100%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p style="margin-top: 20px; font-style: italic;">Budget per beneficiary: Approximately ₹1,200 per year | Cost per health service: ₹150 per consultation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. Risks & Mitigation Measures -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">16</div>
+                <h2 class="section-title">Risks & Mitigation Measures</h2>
+            </div>
+            <div class="section-content">
+                <div class="risk-matrix">
+                    <div class="risk-card">
+                        <div class="risk-title">
+                            <i class="fas fa-exclamation-triangle risk-icon"></i>
+                            <h4>Community Resistance</h4>
+                        </div>
+                        <p><strong>Risk:</strong> Cultural barriers may prevent women from accessing healthcare services</p>
+                        <p><strong>Mitigation:</strong> Engage community leaders early, involve men in awareness sessions, demonstrate benefits through early adopters</p>
+                    </div>
+                    
+                    <div class="risk-card mitigated">
+                        <div class="risk-title">
+                            <i class="fas fa-check-circle risk-icon"></i>
+                            <h4>Staff Retention</h4>
+                        </div>
+                        <p><strong>Risk:</strong> Difficulty retaining healthcare professionals in rural areas</p>
+                        <p><strong>Mitigation:</strong> Competitive compensation, career development opportunities, community recognition programs</p>
+                    </div>
+                    
+                    <div class="risk-card">
+                        <div class="risk-title">
+                            <i class="fas fa-exclamation-triangle risk-icon"></i>
+                            <h4>Funding Uncertainty</h4>
+                        </div>
+                        <p><strong>Risk:</strong> Dependence on donor funding for program sustainability</p>
+                        <p><strong>Mitigation:</strong> Diversify funding sources, develop income-generating components, build government partnerships</p>
+                    </div>
+                    
+                    <div class="risk-card mitigated">
+                        <div class="risk-title">
+                            <i class="fas fa-check-circle risk-icon"></i>
+                            <h4>Infrastructure Challenges</h4>
+                        </div>
+                        <p><strong>Risk:</strong> Poor road connectivity affecting mobile clinic access</p>
+                        <p><strong>Mitigation:</strong> Strategic placement of service points, use of suitable vehicles, contingency planning for monsoon season</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. Success Stories / Case Highlights -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">17</div>
+                <h2 class="section-title">Success Stories & Case Highlights</h2>
+            </div>
+            <div class="section-content">
+                <div class="success-story">
+                    <div class="story-header">
+                        <div class="story-avatar"></div>
+                        <div>
+                            <h3>Sunita's Journey from Patient to Health Leader</h3>
+                            <p>Pune District, Maharashtra</p>
+                        </div>
+                    </div>
+                    <p>Sunita, a 28-year-old mother of two from a remote village in Pune district, was diagnosed with severe anemia during a Aarogya Sakhi mobile clinic visit. Through the program's intervention, she received proper treatment and nutritional counseling.</p>
+                    <p>Not only did Sunita recover fully, but she also enrolled in the community health worker training program. Today, she serves as an Aarogya Sakhi in her village, providing basic healthcare to 50+ women monthly and conducting health awareness sessions.</p>
+                    <p>"The program saved my life and gave me a purpose. Now I help other women in my village stay healthy," says Sunita, who has been recognized as a community health champion by the district health department.</p>
+                </div>
+                
+                <div class="success-story" style="margin-top: 30px;">
+                    <div class="story-header">
+                        <div>
+                            <h3>Village Health Transformation</h3>
+                            <p>Parner Taluka, Ahmednagar</p>
+                        </div>
+                    </div>
+                    <p>In Parner taluka, the program has led to measurable health improvements:</p>
+                    <ul>
+                        <li>Institutional deliveries increased from 45% to 82% in 2 years</li>
+                        <li>Anemia prevalence reduced from 58% to 42% among women aged 15-49</li>
+                        <li>100% of pregnant women now receive antenatal check-ups (up from 35%)</li>
+                        <li>Formation of 8 active women's health groups that meet monthly</li>
+                    </ul>
+                    <p>The village has been declared "Anemia-free" by the district health department, serving as a model for neighboring communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 18. Media Gallery -->
+    <section class="program-section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number">18</div>
+                <h2 class="section-title">Media Gallery</h2>
+            </div>
+            <div class="section-content">
+                <div class="gallery-tabs">
+                    <div class="gallery-tab active" data-tab="images">Images</div>
+                    <div class="gallery-tab" data-tab="videos">Videos</div>
+                    <div class="gallery-tab" data-tab="documents">Documents</div>
+                </div>
+                
+                <div class="gallery-content active" id="images-tab">
+                    <div class="image-grid">
+                        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');"></div>
+                        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1480&q=80');"></div>
+                        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');"></div>
+                        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1584467735871-8db9ac8d0916?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');"></div>
+                        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80');"></div>
+                        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1586773860418-dc22f8b874bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');"></div>
+                    </div>
+                </div>
+                
+                <div class="gallery-content" id="videos-tab">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/4B5XgLzCvAY" title="Aarogya Sakhi Program Video" allowfullscreen></iframe>
+                    </div>
+                    <p>Program documentary showing mobile clinic operations and beneficiary testimonials</p>
+                </div>
+                
+                <div class="gallery-content" id="documents-tab">
+                    <div class="documents-list">
+                        <h3>Program Documents</h3>
+                        <ul>
+                            <li><i class="fas fa-file-pdf"></i> <a href="#">Program Brochure 2024</a></li>
+                            <li><i class="fas fa-file-pdf"></i> <a href="#">Mid-term Evaluation Report 2023</a></li>
+                            <li><i class="fas fa-file-alt"></i> <a href="#">Case Study Collection</a></li>
+                            <li><i class="fas fa-chart-bar"></i> <a href="#">Impact Dashboard 2023</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+              <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    
+                <div class="footer-column">
+                    <!-- <h3>Lakshya Foundation</h3> -->
+                    <p>Empowering communities through sustainable development initiatives across 12 key sectors. Registered under the Maharashtra Public Trusts Act, 1950.</p>
+                    <p style="margin-top: 15px;"><strong>Registration:</strong> F-15079</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Sectors</h3>
+                    <ul class="footer-links">
+                        <li><a href="#education">Education & Literacy</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#women">Women Empowerment</a></li>
+                        <li><a href="#child">Child Welfare</a></li>
+                        <li><a href="#rural">Rural Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Get Involved</h3>
+                    <ul class="footer-links">
+                        <li><a href="#donate">Donate Now</a></li>
+                        <li><a href="#volunteer">Volunteer With Us</a></li>
+                        <li><a href="#partner">Partner With Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#fundraise">Fundraise for a Cause</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Transparency</h3>
+                    <ul class="footer-links">
+                        <li><a href="#financials">Financial Statements</a></li>
+                        <li><a href="#annual-reports">Annual Reports</a></li>
+                        <li><a href="#policies">Policies & Disclosures</a></li>
+                        <li><a href="#legal">Legal & Registration</a></li>
+                        <li><a href="#grievance">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
+               <p class="footer-credit">
+  Designed & Developed by 
+  <a href="https://omnigross.in" target="_blank" rel="noopener">
+    Omnigross
+  </a>
+ 
+</p>
+
+            </div>
+        </div>
+    </footer>
+
+    
+       
+   <div id="google_translate_element"></div>
+      <script src="script.js"></script>
+
+    <!-- <script>
+        // Gallery Tabs
+        document.querySelectorAll('.gallery-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.gallery-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId + '-tab').classList.add('active');
+            });
+        });
+        
+        // Mobile Menu Toggle (if needed)
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            // In a full implementation, this would toggle a mobile menu
+            alert('In a complete implementation, this would open the mobile menu');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Section highlight on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.program-section, .cta-section');
+            const navLinks = document.querySelectorAll('.gallery-tab');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+        });
+    </script>
+   -->
+</body>
+</html>

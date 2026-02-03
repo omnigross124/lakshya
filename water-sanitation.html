@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Water & Sanitation | Lakshya Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+          <div class="header-left">
+    
+    <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    <div class="logo-text">
+      <img src="assets/logo2.png" alt="Lakshya Foundation Text">
+    </div>
+
+  </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+  <ul class="nav-menu" id="navMenu">
+
+    <li>
+      <a href="index.html" class="nav-link active" data-i18n="nav_home">
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html" class="nav-link" data-i18n="nav_about">
+        About Us
+      </a>
+    </li>
+
+    <li class="has-mega-menu">
+      <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">
+        Our Work
+      </a>
+
+      <div class="mega-menu">
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
+          <ul class="mega-menu-links">
+            <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
+            <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
+            <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
+            <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_development_areas">Development Areas</h4>
+          <ul class="mega-menu-links">
+            <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
+            <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
+            <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
+            <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
+          <ul class="mega-menu-links">
+            <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
+            <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
+            <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
+            <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_get_involved">Get Involved</h4>
+          <ul class="mega-menu-links">
+            <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
+            <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </li>
+
+    <li>
+      <a href="programs.html" class="nav-link" data-i18n="nav_programs">
+        Programs
+      </a>
+    </li>
+
+    <li>
+      <a href="impact.html" class="nav-link" data-i18n="nav_impact">
+        Impact
+      </a>
+    </li>
+
+    <li>
+      <a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">
+        Get Involved
+      </a>
+    </li>
+
+    <li>
+      <a href="transparency.html" class="nav-link" data-i18n="nav_transparency">
+        Transparency
+      </a>
+    </li>
+
+    <li>
+      <a href="contact.html" class="nav-link" data-i18n="nav_contact">
+        Contact Us
+      </a>
+    </li>
+
+    <li class="lang-item">
+      <button type="button" id="langToggle" data-i18n="nav_language">
+        Languages
+      </button>
+
+      <ul class="lang-menu">
+        <li data-lang="en">English</li>
+        <li data-lang="hi">हिंदी</li>
+        <li data-lang="mr">मराठी</li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
+        </div>
+
+
+    </header>
+<div id="google_translate_element" style="padding:10px;"></div>
+
+  <!-- HERO -->
+  <section class="section wash-hero">
+    <div class="container two-col">
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80"
+          alt="Clean water access and sanitation support">
+      </div>
+
+      <div class="hero-content">
+        <h1>Clean Water.<br>Healthy Communities.</h1>
+
+        <p>
+          Lakshya Foundation works to improve access to safe drinking water, sanitation,
+          and hygiene awareness in underserved communities—reducing disease and
+          improving quality of life.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#wash-programs" class="btn btn-primary">
+            Our WASH Programs
+          </a>
+          <a href="#volunteer" class="btn btn-outline">
+            Join as a Volunteer
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section wash-intro">
+    <div class="container two-col">
+
+      <div class="content">
+        <h2>Water, Sanitation & Hygiene for Dignified Living</h2>
+
+        <p class="lead">
+          Access to clean water and safe sanitation is a basic human right.
+          We work with villages, schools, and communities to improve water sources,
+          build sanitation facilities, and promote hygiene habits.
+        </p>
+
+        <p>
+          Through community participation, awareness drives, and infrastructure support,
+          we help reduce water-borne diseases and create healthier environments for
+          children and families.
+        </p>
+
+        <ul class="impact-list">
+          <li>Safe drinking water access and awareness</li>
+          <li>Toilet construction and sanitation improvement</li>
+          <li>Hygiene education in schools and communities</li>
+        </ul>
+
+        <a href="#wash-programs" class="btn btn-primary">Our WASH Programs</a>
+        <a href="#volunteer" class="btn btn-outline">Join as a Volunteer</a>
+      </div>
+
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80"
+          alt="Water and sanitation program"
+          loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="section bg-light" id="wash-programs">
+    <div class="container">
+      <h2 class="center">Key Programs</h2>
+
+      <div class="cards icon-cards">
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h3>Clean Water Access</h3>
+          <p>
+            Supporting clean drinking water sources through repair, maintenance awareness,
+            and access improvement in underserved areas.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-toilet"></i>
+          </div>
+          <h3>Sanitation Infrastructure</h3>
+          <p>
+            Promoting toilet construction, safe waste management, and clean village drives
+            to improve sanitation and dignity.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-hands-bubbles"></i>
+          </div>
+          <h3>Hygiene Awareness</h3>
+          <p>
+            Hygiene education on handwashing, water storage, menstrual hygiene,
+            and disease prevention in schools and communities.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section light impact-section">
+    <div class="container">
+
+      <h2 class="section-title">How We Work</h2>
+
+      <p class="section-subtitle">
+        <br>
+        Our approach is community-driven, practical, and focused on long-term hygiene and sanitation behavior change.
+      </p>
+
+      <div class="grid-4 how-we-work">
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-search-location"></i>
+          </div>
+          <h4>Needs Assessment</h4>
+          <p>
+            We identify water and sanitation gaps through surveys, community dialogue, and local partnerships.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-faucet"></i>
+          </div>
+          <h4>Water Source Support</h4>
+          <p>
+            Repair, maintenance training, and awareness for sustainable clean water access.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-toilet"></i>
+          </div>
+          <h4>Sanitation Improvement</h4>
+          <p>
+            Supporting toilets, waste disposal systems, and clean village initiatives for healthier living.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-hand-sparkles"></i>
+          </div>
+          <h4>Hygiene Education</h4>
+          <p>
+            School and community sessions to build everyday hygiene habits and prevent disease.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section impact-section" id="impact">
+    <div class="container">
+      <h2 class="center">Our Impact</h2>
+      <p class="center impact-subtitle">
+        Measurable change delivered through water, sanitation, and hygiene initiatives
+      </p>
+
+      <div class="impact-stats">
+
+        <div class="stat">
+          <h3><span class="counter" data-target="14000">0</span>+</h3>
+          <p>People Reached with Hygiene Awareness</p>
+        </div>
+
+        <div class="stat">
+          <h3><span class="counter" data-target="420">0</span>+</h3>
+          <p>Sanitation & Cleanliness Drives Conducted</p>
+        </div>
+
+        <div class="stat">
+          <h3><span class="counter" data-target="65">0</span>%</h3>
+          <p>Improvement in Safe Hygiene Practices</p>
+        </div>
+
+        <div class="stat stat-center">
+          <h3><span class="counter" data-target="50">0</span>%</h3>
+          <p>Reduction in Water-borne Illness Risks</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AREAS WE SERVE -->
+  <section class="section impact-section light">
+    <div class="container">
+
+      <h2 class="section-title">Areas We Serve</h2>
+
+      <p class="section-subtitle">
+        <br>
+        We work across villages and communities to improve water sources, sanitation facilities, and hygiene practices.
+      </p>
+
+      <div class="grid-4 areas-serve">
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h4>125+ Villages</h4>
+          <p>
+            Reached through water and sanitation initiatives.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-city"></i>
+          </div>
+          <h4>6 Districts</h4>
+          <p>
+            Supporting rural and semi-urban communities with WASH programs.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-school"></i>
+          </div>
+          <h4>Schools & Anganwadis</h4>
+          <p>
+            Hygiene education and sanitation support for children and families.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4>Local Partnerships</h4>
+          <p>
+            Working with communities and local bodies for sustainable solutions.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 1 -->
+  <section class="section impact-section">
+    <div class="container two-col">
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80"
+          alt="Clean water support">
+      </div>
+
+      <div class="content-wrap">
+        <h2>Safe Drinking Water Support</h2>
+
+        <p class="lead-text">
+          Safe drinking water reduces disease and improves daily life. We support communities by improving
+          water access, promoting safe storage, and encouraging clean water practices.
+        </p>
+
+        <ul class="check-list">
+          <li><strong>Water Source Repair</strong> support and maintenance awareness</li>
+          <li><strong>Safe Storage</strong> and household hygiene education</li>
+          <li><strong>Water Testing Awareness</strong> for quality and safety</li>
+          <li><strong>Community Ownership</strong> for long-term sustainability</li>
+        </ul>
+
+        <p class="impact-note">
+          Our goal is reliable water access with safe everyday practices for healthier communities.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 2 -->
+  <section class="section light impact-section">
+    <div class="container two-col reverse">
+
+      <div class="content-wrap">
+        <h2>Sanitation & Hygiene for Dignity</h2>
+
+        <p class="lead-text">
+          Sanitation ensures dignity and safety—especially for women and children. We promote toilets,
+          clean surroundings, and hygiene habits through education and community participation.
+        </p>
+
+        <ul class="icon-list">
+          <li>
+            <i class="fas fa-toilet"></i>
+            <span><strong>Toilet Access</strong> and safe sanitation awareness</span>
+          </li>
+
+          <li>
+            <i class="fas fa-trash"></i>
+            <span><strong>Waste Management</strong> practices for cleaner villages</span>
+          </li>
+
+          <li>
+            <i class="fas fa-hand-sparkles"></i>
+            <span><strong>Handwashing Culture</strong> through school and community sessions</span>
+          </li>
+
+          <li>
+            <i class="fas fa-female"></i>
+            <span><strong>Menstrual Hygiene</strong> awareness and dignity support</span>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1581579185169-8fdb514c56c3?auto=format&fit=crop&w=1200&q=80"
+          alt="Sanitation and hygiene awareness">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BOX -->
+  <section class="section cta-section">
+    <div class="container cta-box">
+
+      <h2>Support Water & Sanitation Programs</h2>
+
+      <p>
+        Your support helps communities access clean water, safe toilets, and hygiene education—saving lives and ensuring dignity.
+      </p>
+
+      <div class="cta-actions">
+        <a href="#donate" class="btn primary-btn">Donate Now</a>
+        <a href="#volunteer" class="btn outline-btn">Become a Volunteer</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section light impact-section">
+    <div class="container">
+
+      <h2 class="section-title">WASH Programs in Action</h2>
+
+      <p class="section-subtitle">
+        <br>
+        Watch glimpses of our water, sanitation, and hygiene awareness initiatives across communities.
+      </p>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/8Zk1m3yO7pA"
+          title="Water and Sanitation Program"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="stories-section">
+    <div class="container">
+
+      <h2>Stories of Change</h2>
+      <p>
+        Behind every improvement is a family living healthier with clean water and sanitation support.
+      </p>
+
+      <div class="story-grid">
+
+        <div class="story-card">
+          <p>
+            “Earlier we had to walk far for water. Now our source is improved and we learned safe storage.
+            It made our daily life easier and healthier.”
+          </p>
+          <h4>— Savita, Community Member</h4>
+        </div>
+
+        <div class="story-card">
+          <p>
+            “After hygiene sessions in our school, children started washing hands regularly.
+            Illness reduced and attendance improved.”
+          </p>
+          <h4>— Ramesh, Teacher</h4>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title">Water & Sanitation Gallery</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto 40px; color:#666;">
+        <br>
+        Moments from our WASH initiatives including clean water support, sanitation drives, hygiene education, and community-led programs.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80" alt="Clean water access">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1581579185169-8fdb514c56c3?auto=format&fit=crop&w=1200&q=80" alt="Sanitation drive">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80" alt="Water awareness">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1581579185169-8fdb514c56c3?auto=format&fit=crop&w=1200&q=80" alt="Hygiene education">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80" alt="Water support">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1581579185169-8fdb514c56c3?auto=format&fit=crop&w=1200&q=80" alt="Community sanitation">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80" alt="Clean water program">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1581579185169-8fdb514c56c3?auto=format&fit=crop&w=1200&q=80" alt="Hygiene awareness">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container center">
+      <h2>Support Our Water & Sanitation Mission</h2>
+      <p>Your support helps deliver clean water access and hygiene education to communities in need.</p>
+      <button id="donateBtn">Donate Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+              <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    
+                <div class="footer-column">
+                    <!-- <h3>Lakshya Foundation</h3> -->
+                    <p>Empowering communities through sustainable development initiatives across 12 key sectors. Registered under the Maharashtra Public Trusts Act, 1950.</p>
+                    <p style="margin-top: 15px;"><strong>Registration:</strong> F-15079</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Sectors</h3>
+                    <ul class="footer-links">
+                        <li><a href="#education">Education & Literacy</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#women">Women Empowerment</a></li>
+                        <li><a href="#child">Child Welfare</a></li>
+                        <li><a href="#rural">Rural Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Get Involved</h3>
+                    <ul class="footer-links">
+                        <li><a href="#donate">Donate Now</a></li>
+                        <li><a href="#volunteer">Volunteer With Us</a></li>
+                        <li><a href="#partner">Partner With Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#fundraise">Fundraise for a Cause</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Transparency</h3>
+                    <ul class="footer-links">
+                        <li><a href="#financials">Financial Statements</a></li>
+                        <li><a href="#annual-reports">Annual Reports</a></li>
+                        <li><a href="#policies">Policies & Disclosures</a></li>
+                        <li><a href="#legal">Legal & Registration</a></li>
+                        <li><a href="#grievance">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
+               <p class="footer-credit">
+  Designed & Developed by 
+  <a href="https://omnigross.in" target="_blank" rel="noopener">
+    Omnigross
+  </a>
+ 
+</p>
+
+            </div>
+        </div>
+    </footer>
+
+    
+       
+   <div id="google_translate_element"></div>
+
+  <!-- JS -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    let started = false;
+
+    function startCount() {
+      if (started) return;
+      started = true;
+
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 200;
+
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const section = document.querySelector('.impact-section');
+      const sectionTop = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (sectionTop < screenHeight - 100) {
+        startCount();
+      }
+    });
+
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+      this.querySelector('i').classList.toggle('fa-bars');
+      this.querySelector('i').classList.toggle('fa-times');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('navMenu').classList.remove('active');
+        document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+        document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Healthcare & Public Health | Lakshya Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+          <div class="header-left">
+    
+    <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    <div class="logo-text">
+      <img src="assets/logo2.png" alt="Lakshya Foundation Text">
+    </div>
+
+  </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+  <ul class="nav-menu" id="navMenu">
+
+    <li>
+      <a href="index.html" class="nav-link active" data-i18n="nav_home">
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html" class="nav-link" data-i18n="nav_about">
+        About Us
+      </a>
+    </li>
+
+    <li class="has-mega-menu">
+      <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">
+        Our Work
+      </a>
+
+      <div class="mega-menu">
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
+          <ul class="mega-menu-links">
+            <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
+            <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
+            <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
+            <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_development_areas">Development Areas</h4>
+          <ul class="mega-menu-links">
+            <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
+            <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
+            <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
+            <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
+          <ul class="mega-menu-links">
+            <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
+            <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
+            <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
+            <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_get_involved">Get Involved</h4>
+          <ul class="mega-menu-links">
+            <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
+            <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </li>
+
+    <li>
+      <a href="programs.html" class="nav-link" data-i18n="nav_programs">
+        Programs
+      </a>
+    </li>
+
+    <li>
+      <a href="impact.html" class="nav-link" data-i18n="nav_impact">
+        Impact
+      </a>
+    </li>
+
+    <li>
+      <a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">
+        Get Involved
+      </a>
+    </li>
+
+    <li>
+      <a href="transparency.html" class="nav-link" data-i18n="nav_transparency">
+        Transparency
+      </a>
+    </li>
+
+    <li>
+      <a href="contact.html" class="nav-link" data-i18n="nav_contact">
+        Contact Us
+      </a>
+    </li>
+
+    <li class="lang-item">
+      <button type="button" id="langToggle" data-i18n="nav_language">
+        Languages
+      </button>
+
+      <ul class="lang-menu">
+        <li data-lang="en">English</li>
+        <li data-lang="hi">हिंदी</li>
+        <li data-lang="mr">मराठी</li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
+        </div>
+
+
+    </header>
+<div id="google_translate_element" style="padding:10px;"></div>
+    <section class="section healthcare-hero">
+  <div class="container two-col">
+    
+    <!-- Left Image -->
+    <div class="hero-image">
+      <img 
+        src="https://images.unsplash.com/photo-1584515933487-779824d29309" 
+        alt="Community Healthcare Support">
+    </div>
+
+    <!-- Right Content -->
+    <div class="hero-content">
+      <h1>Healthcare for Every Community.<br>Care for Every Life.</h1>
+      
+      <p>
+        Lakshya Foundation delivers accessible, affordable, and preventive healthcare
+        services to underserved communities, focusing on early intervention,
+        awareness, and long-term well-being.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#health-programs" class="btn btn-primary">
+          Our Healthcare Programs
+        </a>
+        <a href="#volunteer" class="btn btn-outline">
+          Join as a Volunteer
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- HEALTHCARE INTRO SECTION -->
+<section class="section healthcare-intro">
+  <div class="container two-col">
+    
+    <!-- Content -->
+    <div class="content">
+     
+      <h2>Accessible Healthcare for Healthier Communities</h2>
+      
+      <p class="lead">
+        Lakshya Foundation is committed to closing the healthcare gap in
+        underserved communities by delivering essential, affordable, and
+        preventive healthcare services.
+      </p>
+
+      <p>
+        Through medical camps, health awareness programs, and early diagnostic
+        support, we empower individuals and families to take charge of their
+        health while strengthening local healthcare systems for long-term,
+        sustainable impact.
+      </p>
+
+      <ul class="impact-list">
+        <li>Free medical check-ups & health camps</li>
+        <li>Preventive care & early diagnosis</li>
+        <li>Health education & community awareness</li>
+      </ul>
+       <a href="#health-programs" class="btn btn-primary">
+          Our Healthcare Programs
+        </a>
+        <a href="#volunteer" class="btn btn-outline">
+          Join as a Volunteer
+        </a>
+    </div>
+    
+
+    <!-- Image -->
+    <div class="image-wrap">
+      <img 
+        src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80"
+        alt="Community healthcare program by Lakshya Foundation"
+        loading="lazy">
+    </div>
+
+  </div>
+</section>
+
+
+ <!-- PROGRAMS -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="center">Key Programs</h2>
+
+    <div class="cards icon-cards">
+
+      <div class="card">
+        <div class="icon">
+          <i class="fa-solid fa-stethoscope"></i>
+        </div>
+        <h3>Medical Camps</h3>
+        <p>
+          Free health check-ups, diagnostics, and doctor consultations
+          delivered directly to rural and underserved communities.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <h3>Health Awareness</h3>
+        <p>
+          Community education on hygiene, nutrition, maternal health,
+          and prevention of common diseases.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">
+          <i class="fa-solid fa-children"></i>
+        </div>
+        <h3>Women & Child Health</h3>
+        <p>
+          Specialized care for mothers and children through nutrition
+          support, immunization, and regular monitoring.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section light impact-section">
+  <div class="container">
+
+    <h2 class="section-title">How We Work</h2>
+
+    <p class="section-subtitle">
+      <br>
+      Our approach ensures transparent, efficient, and community-driven healthcare
+      delivery for underserved populations.
+    </p>
+
+    <div class="grid-4 how-we-work">
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-search-location"></i>
+        </div>
+        <h4>Community Assessment</h4>
+        <p>
+          We identify healthcare gaps through field surveys and collaboration
+          with local communities.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-briefcase-medical"></i>
+        </div>
+        <h4>Medical Camps & Outreach</h4>
+        <p>
+          Doctors and health workers deliver free check-ups, diagnostics,
+          and consultations at community locations.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-hospital-user"></i>
+        </div>
+        <h4>Treatment & Referrals</h4>
+        <p>
+          Patients requiring advanced care are referred and assisted
+          at partnered hospitals.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-heart-circle-check"></i>
+        </div>
+        <h4>Follow-up & Monitoring</h4>
+        <p>
+          Continuous follow-ups ensure treatment completion,
+          recovery, and long-term wellbeing.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- IMPACT -->
+<section class="section impact-section">
+  <div class="container">
+    <h2 class="center">Our Impact</h2>
+    <p class="center impact-subtitle">
+      Measurable change delivered through community-driven healthcare initiatives
+    </p>
+
+    <div class="impact-stats">
+
+  <div class="stat">
+    <h3><span class="counter" data-target="10000">0</span>+</h3>
+    <p>Individuals Reached Through Health Camps</p>
+  </div>
+
+  <div class="stat">
+    <h3><span class="counter" data-target="250">0</span>+</h3>
+    <p>Medical Camps Conducted</p>
+  </div>
+
+  <div class="stat">
+    <h3><span class="counter" data-target="75">0</span>%</h3>
+    <p>Improvement in Maternal & Child Health Awareness</p>
+  </div>
+
+  <!-- CENTER THIS ONE -->
+  <div class="stat stat-center">
+    <h3><span class="counter" data-target="60">0</span>%</h3>
+    <p>Reduction in Preventable Disease Risks</p>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+<section class="section impact-section light">
+  <div class="container">
+
+    <h2 class="section-title">Areas We Serve</h2>
+
+    <p class="section-subtitle">
+      <br>
+      We extend our healthcare services to underserved communities across
+      multiple regions, focusing on accessibility and continuity of care.
+    </p>
+
+    <div class="grid-4 areas-serve">
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-map-marked-alt"></i>
+        </div>
+        <h4>120+ Villages</h4>
+        <p>
+          Reached through mobile medical units and outreach camps.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-city"></i>
+        </div>
+        <h4>5 Districts</h4>
+        <p>
+          Serving both rural and semi-urban communities.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-users"></i>
+        </div>
+        <h4>Underserved Communities</h4>
+        <p>
+          Focus on low-income families, women, and children.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h4>Community Partnerships</h4>
+        <p>
+          Working with local leaders and organizations for impact.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section impact-section">
+  <div class="container two-col">
+    <div class="image-wrap">
+     <img 
+  src="https://images.unsplash.com/photo-1583321500900-82807e458f3c?q=80&w=1000" 
+  alt="Mobile Medical Unit serving rural communities">
+
+    </div>
+
+    <div class="content-wrap">
+      <h2>Mobile Medical Units</h2>
+
+      <p class="lead-text">
+        Access to healthcare should not depend on location. Our Mobile Medical Units
+        travel to remote and underserved villages, delivering essential medical
+        services directly to those who need them the most.
+      </p>
+
+      <ul class="check-list">
+        <li><strong>Qualified Doctor Consultations</strong> for primary healthcare needs</li>
+        <li><strong>On-site Diagnostics</strong> including BP, sugar, and basic screenings</li>
+        <li><strong>Free Medicines</strong> for common illnesses and chronic conditions</li>
+        <li><strong>Health Awareness Sessions</strong> on hygiene, nutrition, and prevention</li>
+      </ul>
+
+      <p class="impact-note">
+        Through these units, we reduce travel burdens, ensure early diagnosis,
+        and bring dignity and care to every doorstep.
+      </p>
+
+    
+    </div>
+  </div>
+</section>
+
+
+<section class="section light impact-section">
+  <div class="container two-col reverse">
+
+    <!-- CONTENT -->
+    <div class="content-wrap">
+      <h2>Maternal Health Care</h2>
+
+      <p class="lead-text">
+        Every mother deserves a safe and healthy pregnancy. We provide continuous
+        care, guidance, and support to ensure the wellbeing of both mother and child.
+      </p>
+
+      <ul class="icon-list">
+        <li>
+          <i class="fas fa-stethoscope"></i>
+          <span><strong>Antenatal Check-ups</strong> for early risk detection</span>
+        </li>
+
+        <li>
+          <i class="fas fa-apple-alt"></i>
+          <span><strong>Nutrition & Supplement Support</strong> for healthy development</span>
+        </li>
+
+        <li>
+          <i class="fas fa-comments"></i>
+          <span><strong>Health Counseling</strong> for safe pregnancy and delivery</span>
+        </li>
+
+        <li>
+          <i class="fas fa-baby"></i>
+          <span><strong>Postnatal Care</strong> for mother and newborn wellbeing</span>
+        </li>
+      </ul>
+
+      
+    </div>
+
+    <!-- IMAGE -->
+    <div class="image-wrap">
+      <img 
+        src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?q=80&w=1200" 
+        alt="Maternal healthcare support for pregnant women">
+    </div>
+
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container cta-box">
+
+    <h2>Support Healthcare for Every Community</h2>
+
+    <p>
+      Your support helps us deliver essential medical services, nutrition support,
+      and emergency care to underserved families.
+    </p>
+
+    <div class="cta-actions">
+      <a href="#donate" class="btn primary-btn">Donate Now</a>
+      <a href="#volunteer" class="btn outline-btn">Become a Volunteer</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section light impact-section">
+  <div class="container">
+
+    <h2 class="section-title">Health Awareness Programs</h2>
+
+    <p class="section-subtitle">
+      <br>
+      We conduct community-based health awareness sessions to educate families
+      about hygiene, nutrition, maternal care, and disease prevention.
+    </p>
+
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/BtN-goy9VOY"
+        title="Health Awareness Program"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section impact-section">
+  <div class="container">
+    <h2 class="section-title">Nutrition & Anemia Prevention</h2>
+
+    <p class="section-subtitle">
+      <br>
+      We promote balanced nutrition and anemia prevention through awareness,
+      supplementation, and community-based interventions—especially for women
+      and children.
+    </p>
+
+    <div class="grid-3">
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-apple-alt"></i>
+        </div>
+        <h4>Balanced Nutrition</h4>
+        <p>
+          <br>
+          Encouraging iron-rich diets using affordable and locally available foods.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <h4>Community Awareness</h4>
+        <p>
+          Interactive workshops on anemia prevention and healthy eating habits.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-circle">
+          <i class="fas fa-pills"></i>
+        </div>
+        <h4>Supplement Support</h4>
+        <p>
+          Providing iron and nutrition supplements to women and children at risk.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section impact-section">
+  <div class="container two-col">
+
+    <!-- IMAGE -->
+    <div class="image-wrap">
+      <img 
+        src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1200" 
+        alt="Emergency medical support and ambulance service">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content-wrap">
+      <h2>Emergency Medical Support</h2>
+
+      <p class="lead-text">
+        During critical medical emergencies, timely care can save lives.
+        Our emergency response program ensures immediate assistance and
+        rapid referrals to nearby hospitals.
+      </p>
+
+      <ul class="icon-list">
+        <li>
+          <i class="fas fa-ambulance"></i>
+          <span><strong>24/7 Emergency Response</strong> for urgent medical needs</span>
+        </li>
+
+        <li>
+          <i class="fas fa-hospital"></i>
+          <span><strong>Hospital Referrals</strong> and assisted admissions</span>
+        </li>
+
+        <li>
+          <i class="fas fa-heartbeat"></i>
+          <span><strong>Critical Care Support</strong> during life-threatening situations</span>
+        </li>
+
+        <li>
+          <i class="fas fa-phone-volume"></i>
+          <span><strong>Emergency Helpline</strong> for quick coordination</span>
+        </li>
+      </ul>
+
+      <a href="#contact" class="btn btn-outline">Get Emergency Help</a>
+    </div>
+
+  </div>
+</section>
+<section class="stories-section">
+  <div class="container">
+
+    <h2>Stories of Change</h2>
+    <p>
+      Behind every statistic is a life touched by timely healthcare and compassionate support.
+    </p>
+
+    <div class="story-grid">
+
+      <div class="story-card">
+        <p>
+          “My child was suffering from frequent illness, but we could not afford
+          regular doctor visits. The free medical camp helped us get the right
+          treatment on time. Today, my child is healthy and attending school again.”
+        </p>
+        <h4>— Rani Chavan, Mother</h4>
+      </div>
+
+      <div class="story-card">
+        <p>
+          “During my pregnancy, the maternal health program provided check-ups,
+          nutrition guidance, and constant support. I felt safe and cared for
+          throughout my journey.”
+        </p>
+        <h4>— Sunita Devi, Beneficiary</h4>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Gallery Section -->
+<section class="section" id="gallery">
+  <div class="container">
+    <h2 class="section-title">Healthcare Gallery</h2>
+    <p style="text-align:center; max-width:700px; margin:0 auto 40px; color:#666;">
+      <br>
+      Moments from our healthcare initiatives including medical camps, mobile clinics,
+      health awareness programs, and community care services.
+    </p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309" alt="Medical camp">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde" alt="Doctor examining patient">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1580281657527-47b8e1c1d8b5" alt="Healthcare awareness session">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1612277794980-6b6b5e7d2f5c" alt="Mobile medical unit">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12" alt="Health checkup camp">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1584516150909-c43483ee7932" alt="Doctor consultation">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1576765607924-3f7b8410c7a3" alt="Community healthcare support">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Healthcare volunteers">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container center">
+      <h2>Support Our Healthcare Mission</h2>
+      <p>Your support helps us deliver essential healthcare to those in need.</p>
+      <button id="donateBtn">Donate Now</button>
+    </div>
+  </section>
+
+ <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+              <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    
+                <div class="footer-column">
+                    <!-- <h3>Lakshya Foundation</h3> -->
+                    <p>Empowering communities through sustainable development initiatives across 12 key sectors. Registered under the Maharashtra Public Trusts Act, 1950.</p>
+                    <p style="margin-top: 15px;"><strong>Registration:</strong> F-15079</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Sectors</h3>
+                    <ul class="footer-links">
+                        <li><a href="#education">Education & Literacy</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#women">Women Empowerment</a></li>
+                        <li><a href="#child">Child Welfare</a></li>
+                        <li><a href="#rural">Rural Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Get Involved</h3>
+                    <ul class="footer-links">
+                        <li><a href="#donate">Donate Now</a></li>
+                        <li><a href="#volunteer">Volunteer With Us</a></li>
+                        <li><a href="#partner">Partner With Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#fundraise">Fundraise for a Cause</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Transparency</h3>
+                    <ul class="footer-links">
+                        <li><a href="#financials">Financial Statements</a></li>
+                        <li><a href="#annual-reports">Annual Reports</a></li>
+                        <li><a href="#policies">Policies & Disclosures</a></li>
+                        <li><a href="#legal">Legal & Registration</a></li>
+                        <li><a href="#grievance">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
+               <p class="footer-credit">
+  Designed & Developed by 
+  <a href="https://omnigross.in" target="_blank" rel="noopener">
+    Omnigross
+  </a>
+ 
+</p>
+
+            </div>
+        </div>
+    </footer>
+
+    
+       
+   <div id="google_translate_element"></div>
+
+    
+  <!-- JS -->
+  <script>
+  const counters = document.querySelectorAll('.counter');
+  let started = false;
+
+  function startCount() {
+    if (started) return;
+    started = true;
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const increment = target / 200;
+
+      const updateCount = () => {
+        if (count < target) {
+          count += increment;
+          counter.innerText = Math.ceil(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('.impact-section');
+    const sectionTop = section.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (sectionTop < screenHeight - 100) {
+      startCount();
+    }
+  });
+
+  // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navMenu').classList.remove('active');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // Active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rural Development | Lakshya Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+          <div class="header-left">
+    
+    <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    <div class="logo-text">
+      <img src="assets/logo2.png" alt="Lakshya Foundation Text">
+    </div>
+
+  </div>
+            
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+  <ul class="nav-menu" id="navMenu">
+
+    <li>
+      <a href="index.html" class="nav-link active" data-i18n="nav_home">
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html" class="nav-link" data-i18n="nav_about">
+        About Us
+      </a>
+    </li>
+
+    <li class="has-mega-menu">
+      <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">
+        Our Work
+      </a>
+
+      <div class="mega-menu">
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
+          <ul class="mega-menu-links">
+            <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
+            <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
+            <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
+            <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_development_areas">Development Areas</h4>
+          <ul class="mega-menu-links">
+            <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
+            <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
+            <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
+            <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
+          <ul class="mega-menu-links">
+            <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
+            <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
+            <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
+            <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_get_involved">Get Involved</h4>
+          <ul class="mega-menu-links">
+            <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
+            <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </li>
+
+    <li>
+      <a href="programs.html" class="nav-link" data-i18n="nav_programs">
+        Programs
+      </a>
+    </li>
+
+    <li>
+      <a href="impact.html" class="nav-link" data-i18n="nav_impact">
+        Impact
+      </a>
+    </li>
+
+    <li>
+      <a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">
+        Get Involved
+      </a>
+    </li>
+
+    <li>
+      <a href="transparency.html" class="nav-link" data-i18n="nav_transparency">
+        Transparency
+      </a>
+    </li>
+
+    <li>
+      <a href="contact.html" class="nav-link" data-i18n="nav_contact">
+        Contact Us
+      </a>
+    </li>
+
+    <li class="lang-item">
+      <button type="button" id="langToggle" data-i18n="nav_language">
+        Languages
+      </button>
+
+      <ul class="lang-menu">
+        <li data-lang="en">English</li>
+        <li data-lang="hi">हिंदी</li>
+        <li data-lang="mr">मराठी</li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+
+        </div>
+
+
+    </header>
+<div id="google_translate_element" style="padding:10px;"></div>
+  <!-- HERO -->
+  <section class="section rural-hero">
+    <div class="container two-col">
+
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1593697820742-0b0c9fd0f2b8?auto=format&fit=crop&w=1200&q=80"
+          alt="Rural development and community support">
+      </div>
+
+      <div class="hero-content">
+        <h1>Stronger Villages.<br>Better Futures.</h1>
+
+        <p>
+          Lakshya Foundation supports sustainable rural development through livelihoods,
+          infrastructure, agriculture support, and community-led initiatives—helping
+          villages thrive with dignity and opportunity.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#rural-programs" class="btn btn-primary">
+            Our Rural Development Programs
+          </a>
+          <a href="#volunteer" class="btn btn-outline">
+            Join as a Volunteer
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section rural-intro">
+    <div class="container two-col">
+
+      <div class="content">
+        <h2>Empowering Rural Communities with Sustainable Solutions</h2>
+
+        <p class="lead">
+          Rural development is the key to inclusive progress. We work to strengthen
+          livelihoods, improve infrastructure, and enable access to services like water,
+          sanitation, education, and health awareness.
+        </p>
+
+        <p>
+          Through farmer support, skill training, infrastructure improvement, and community
+          mobilization, we help villages become self-reliant, resilient, and growth-oriented.
+        </p>
+
+        <ul class="impact-list">
+          <li>Livelihood & skill development</li>
+          <li>Agriculture & farmer support</li>
+          <li>Village infrastructure and community services</li>
+        </ul>
+
+        <a href="#rural-programs" class="btn btn-primary">Our Rural Development Programs</a>
+        <a href="#volunteer" class="btn btn-outline">Join as a Volunteer</a>
+      </div>
+
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80"
+          alt="Village development initiative"
+          loading="lazy">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="section bg-light" id="rural-programs">
+    <div class="container">
+      <h2 class="center">Key Programs</h2>
+
+      <div class="cards icon-cards">
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3>Farmer Support</h3>
+          <p>
+            Training on sustainable farming, soil health, crop planning,
+            and access to better agricultural practices for higher income.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <h3>Livelihood & Skills</h3>
+          <p>
+            Vocational training, self-employment support, and entrepreneurship
+            opportunities for rural youth and women.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <i class="fa-solid fa-road"></i>
+          </div>
+          <h3>Infrastructure Improvement</h3>
+          <p>
+            Community development initiatives such as village sanitation,
+            water access support, and essential infrastructure strengthening.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section light impact-section">
+    <div class="container">
+
+      <h2 class="section-title">How We Work</h2>
+
+      <p class="section-subtitle">
+        <br>
+        Our approach is participatory, community-driven, and focused on long-term rural resilience.
+      </p>
+
+      <div class="grid-4 how-we-work">
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-search-location"></i>
+          </div>
+          <h4>Village Needs Assessment</h4>
+          <p>
+            We identify priority needs through field surveys and dialogue with communities.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-people-group"></i>
+          </div>
+          <h4>Community Mobilization</h4>
+          <p>
+            We form local groups and involve residents in planning and implementation.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h4>Program Implementation</h4>
+          <p>
+            Delivering training, infrastructure support, and services through local partnerships.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>Monitoring & Growth</h4>
+          <p>
+            Tracking outcomes and supporting communities for continuous progress and stability.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section impact-section" id="impact">
+    <div class="container">
+      <h2 class="center">Our Impact</h2>
+      <p class="center impact-subtitle">
+        Measurable change delivered through sustainable rural development initiatives
+      </p>
+
+      <div class="impact-stats">
+
+        <div class="stat">
+          <h3><span class="counter" data-target="15000">0</span>+</h3>
+          <p>Rural Residents Supported</p>
+        </div>
+
+        <div class="stat">
+          <h3><span class="counter" data-target="280">0</span>+</h3>
+          <p>Village Programs Conducted</p>
+        </div>
+
+        <div class="stat">
+          <h3><span class="counter" data-target="60">0</span>%</h3>
+          <p>Increase in Livelihood Opportunities</p>
+        </div>
+
+        <div class="stat stat-center">
+          <h3><span class="counter" data-target="45">0</span>%</h3>
+          <p>Improvement in Community Infrastructure Access</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AREAS WE SERVE -->
+  <section class="section impact-section light">
+    <div class="container">
+
+      <h2 class="section-title">Areas We Serve</h2>
+
+      <p class="section-subtitle">
+        <br>
+        We work across multiple regions with community-led development programs for villages.
+      </p>
+
+      <div class="grid-4 areas-serve">
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h4>130+ Villages</h4>
+          <p>
+            Reached through livelihood and infrastructure initiatives.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-city"></i>
+          </div>
+          <h4>7 Districts</h4>
+          <p>
+            Supporting rural and semi-urban regions through local partners.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-tractor"></i>
+          </div>
+          <h4>Farmers & Rural Families</h4>
+          <p>
+            Focus on agriculture support, livelihoods, and essential services.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon-circle">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h4>Community Partnerships</h4>
+          <p>
+            Working with local leaders, SHGs, and institutions for lasting impact.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 1 -->
+  <section class="section impact-section">
+    <div class="container two-col">
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
+          alt="Farmer support program">
+      </div>
+
+      <div class="content-wrap">
+        <h2>Agriculture & Farmer Development</h2>
+
+        <p class="lead-text">
+          Farmers are the backbone of rural India. We support farming communities through
+          training, sustainable practices, and improved access to information and resources.
+        </p>
+
+        <ul class="check-list">
+          <li><strong>Sustainable Farming</strong> methods for better yield</li>
+          <li><strong>Soil & Water Management</strong> training and guidance</li>
+          <li><strong>Crop Planning</strong> to reduce risk and improve income</li>
+          <li><strong>Market Awareness</strong> and value-chain support</li>
+        </ul>
+
+        <p class="impact-note">
+          Our goal is to improve income stability and long-term resilience for rural farmers.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 2 -->
+  <section class="section light impact-section">
+    <div class="container two-col reverse">
+
+      <div class="content-wrap">
+        <h2>Village Infrastructure & Community Services</h2>
+
+        <p class="lead-text">
+          A strong village needs reliable infrastructure—clean water, sanitation, and
+          community spaces. We support village-level improvements through partnerships
+          and community-driven solutions.
+        </p>
+
+        <ul class="icon-list">
+          <li>
+            <i class="fas fa-tint"></i>
+            <span><strong>Water Access Support</strong> and maintenance awareness</span>
+          </li>
+
+          <li>
+            <i class="fas fa-toilet"></i>
+            <span><strong>Sanitation Improvement</strong> and hygiene campaigns</span>
+          </li>
+
+          <li>
+            <i class="fas fa-school"></i>
+            <span><strong>Community Learning Spaces</strong> support for children and youth</span>
+          </li>
+
+          <li>
+            <i class="fas fa-people-roof"></i>
+            <span><strong>Community Mobilization</strong> for long-term solutions</span>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80"
+          alt="Village community development">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BOX -->
+  <section class="section cta-section">
+    <div class="container cta-box">
+
+      <h2>Support Rural Development</h2>
+
+      <p>
+        Your support helps villages build livelihoods, improve infrastructure, and create sustainable futures.
+      </p>
+
+      <div class="cta-actions">
+        <a href="#donate" class="btn primary-btn">Donate Now</a>
+        <a href="#volunteer" class="btn outline-btn">Become a Volunteer</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section light impact-section">
+    <div class="container">
+
+      <h2 class="section-title">Rural Development in Action</h2>
+
+      <p class="section-subtitle">
+        <br>
+        Watch glimpses of our village programs focused on livelihoods, infrastructure, and community empowerment.
+      </p>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/YZVAVxI7qnU"
+          title="Rural Development Program"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="stories-section">
+    <div class="container">
+
+      <h2>Stories of Change</h2>
+      <p>
+        Behind every initiative is a village gaining opportunity, resilience, and hope.
+      </p>
+
+      <div class="story-grid">
+
+        <div class="story-card">
+          <p>
+            “After the training on sustainable farming, my crop yield improved and my income became more stable.
+            I can now plan better for my family.”
+          </p>
+          <h4>— Mahadev, Farmer</h4>
+        </div>
+
+        <div class="story-card">
+          <p>
+            “Our community learned how to maintain clean water systems and work together.
+            The improvements made our village healthier and more united.”
+          </p>
+          <h4>— Sushila, Community Leader</h4>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2 class="section-title">Rural Development Gallery</h2>
+      <p style="text-align:center; max-width:700px; margin:0 auto 40px; color:#666;">
+        <br>
+        Moments from our rural development initiatives including farming support, village infrastructure programs, and community empowerment activities.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="Farming support">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" alt="Village development">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1593697820742-0b0c9fd0f2b8?auto=format&fit=crop&w=1200&q=80" alt="Rural community">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="Agriculture support">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" alt="Community meeting">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1593697820742-0b0c9fd0f2b8?auto=format&fit=crop&w=1200&q=80" alt="Village initiative">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="Farmers training">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80" alt="Rural infrastructure">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container center">
+      <h2>Support Our Rural Development Mission</h2>
+      <p>Your support helps build stronger villages and sustainable livelihoods.</p>
+      <button id="donateBtn">Donate Now</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+              <div class="logo">
+      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+    </div>
+
+    
+                <div class="footer-column">
+                    <!-- <h3>Lakshya Foundation</h3> -->
+                    <p>Empowering communities through sustainable development initiatives across 12 key sectors. Registered under the Maharashtra Public Trusts Act, 1950.</p>
+                    <p style="margin-top: 15px;"><strong>Registration:</strong> F-15079</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Sectors</h3>
+                    <ul class="footer-links">
+                        <li><a href="#education">Education & Literacy</a></li>
+                        <li><a href="#healthcare">Healthcare</a></li>
+                        <li><a href="#women">Women Empowerment</a></li>
+                        <li><a href="#child">Child Welfare</a></li>
+                        <li><a href="#rural">Rural Development</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Get Involved</h3>
+                    <ul class="footer-links">
+                        <li><a href="#donate">Donate Now</a></li>
+                        <li><a href="#volunteer">Volunteer With Us</a></li>
+                        <li><a href="#partner">Partner With Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#fundraise">Fundraise for a Cause</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Transparency</h3>
+                    <ul class="footer-links">
+                        <li><a href="#financials">Financial Statements</a></li>
+                        <li><a href="#annual-reports">Annual Reports</a></li>
+                        <li><a href="#policies">Policies & Disclosures</a></li>
+                        <li><a href="#legal">Legal & Registration</a></li>
+                        <li><a href="#grievance">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
+               <p class="footer-credit">
+  Designed & Developed by 
+  <a href="https://omnigross.in" target="_blank" rel="noopener">
+    Omnigross
+  </a>
+ 
+</p>
+
+            </div>
+        </div>
+    </footer>
+
+    
+       
+   <div id="google_translate_element"></div>
+
+  <!-- JS -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    let started = false;
+
+    function startCount() {
+      if (started) return;
+      started = true;
+
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 200;
+
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(updateCount);
+          } else {
+            counter.innerText = target;
+          }
+        };
+
+        updateCount();
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const section = document.querySelector('.impact-section');
+      const sectionTop = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (sectionTop < screenHeight - 100) {
+        startCount();
+      }
+    });
+
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      document.getElementById('navMenu').classList.toggle('active');
+      this.querySelector('i').classList.toggle('fa-bars');
+      this.querySelector('i').classList.toggle('fa-times');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('navMenu').classList.remove('active');
+        document.getElementById('mobileMenuBtn').querySelector('i').classList.remove('fa-times');
+        document.getElementById('mobileMenuBtn').querySelector('i').classList.add('fa-bars');
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
