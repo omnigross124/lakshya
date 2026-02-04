@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="google" content="notranslate">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparency | Lakshya Foundation</title>
 
-  <title>Transparency</title>
-  <link rel="stylesheet" href="/assets/styles.css">
+  <!-- Fonts + Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles.css">
-  <script defer src="/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- ✅ ONLY ONE CSS LINK -->
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
 
 <!-- Header & Navigation -->
@@ -33,78 +35,121 @@
             </div>
             
             <nav>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                   <li class="has-mega-menu">
-  <a href="our-work.html" class="nav-link">Our Work</a>
+  <ul class="nav-menu" id="navMenu">
 
-  <div class="mega-menu">
-    <div class="mega-menu-column">
-      <h4>Core Sectors</h4>
-      <ul class="mega-menu-links">
-        <li><a href="education.html">Education & Literacy</a></li>
-        <li><a href="healthcare.html">Healthcare & Public Health</a></li>
-        <li><a href="women-empowerment.html">Women Empowerment</a></li>
-        <li><a href="child-welfare.html">Child Welfare & Protection</a></li>
+    <li>
+      <a href="index.html" class="nav-link active" data-i18n="nav_home">
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html" class="nav-link" data-i18n="nav_about">
+        About Us
+      </a>
+    </li>
+
+    <li class="has-mega-menu">
+      <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">
+        Our Work
+      </a>
+
+      <div class="mega-menu">
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
+          <ul class="mega-menu-links">
+            <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
+            <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
+            <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
+            <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_development_areas">Development Areas</h4>
+          <ul class="mega-menu-links">
+            <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
+            <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
+            <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
+            <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
+          <ul class="mega-menu-links">
+            <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
+            <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
+            <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
+            <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
+          </ul>
+        </div>
+
+        <div class="mega-menu-column">
+          <h4 data-i18n="nav_get_involved">Get Involved</h4>
+          <ul class="mega-menu-links">
+            <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+            <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+            <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
+            <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </li>
+
+    <li>
+      <a href="programs.html" class="nav-link" data-i18n="nav_programs">
+        Programs
+      </a>
+    </li>
+
+    <li>
+      <a href="impact.html" class="nav-link" data-i18n="nav_impact">
+        Impact
+      </a>
+    </li>
+
+    <li>
+      <a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">
+        Get Involved
+      </a>
+    </li>
+
+    <li>
+      <a href="transparency.html" class="nav-link" data-i18n="nav_transparency">
+        Transparency
+      </a>
+    </li>
+
+    <li>
+      <a href="contact.html" class="nav-link" data-i18n="nav_contact">
+        Contact Us
+      </a>
+    </li>
+
+    <li class="lang-item">
+      <button type="button" id="langToggle" data-i18n="nav_language">
+        Languages
+      </button>
+
+      <ul class="lang-menu">
+        <li data-lang="en">English</li>
+        <li data-lang="hi">हिंदी</li>
+        <li data-lang="mr">मराठी</li>
       </ul>
-    </div>
+    </li>
 
-    <div class="mega-menu-column">
-      <h4>Development Areas</h4>
-      <ul class="mega-menu-links">
-        <li><a href="sports.html">Sports Support</a></li>
-        <li><a href="rural-development.html">Rural Development</a></li>
-        <li><a href="poverty.html">Poverty Alleviation</a></li>
-        <li><a href="disability.html">Disability Inclusion</a></li>
-      </ul>
-    </div>
-
-    <div class="mega-menu-column">
-      <h4>Social Initiatives</h4>
-      <ul class="mega-menu-links">
-        <li><a href="water-sanitation.html">Water & Sanitation</a></li>
-        <li><a href="disaster-relief.html">Disaster Relief</a></li>
-        <li><a href="human-rights.html">Human Rights</a></li>
-        <li><a href="community.html">Community Development</a></li>
-      </ul>
-    </div>
-
-    <div class="mega-menu-column">
-      <h4>Get Involved</h4>
-      <ul class="mega-menu-links">
-        <li><a href="donate.html">Donate</a></li>
-        <li><a href="volunteer.html">Volunteer</a></li>
-        <li><a href="partner.html">Partner With Us</a></li>
-        <li><a href="programs.html">View All Programs</a></li>
-      </ul>
-    </div>
-  </div>
-</li>
-
-                    <li><a href="programs.html" class="nav-link">Programs</a></li>
-                    <li><a href="impact.html" class="nav-link">Impact</a></li>
-                    <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
-                    <li><a href="transparency.html" class="nav-link">Transparency</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-                    <li class="lang-item">
-  <button type="button" id="langToggle">
-    Languages
-  </button>
-
-  <ul class="lang-menu">
-    <li data-lang="en">English</li>
-    <li data-lang="hi">हिंदी</li>
-    <li data-lang="mr">मराठी</li>
   </ul>
-</li>
+</nav>
 
-
-            </nav>
         </div>
 
 
     </header>
+<div id="google_translate_element" style="padding:10px;"></div>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <main>
   <h1>Page Title</h1>
@@ -160,7 +205,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
+                <p>&copy; 2026 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
                <p class="footer-credit">
   Designed & Developed by 
   <a href="https://omnigross.in" target="_blank" rel="noopener">
@@ -172,6 +217,7 @@
             </div>
         </div>
     </footer>
+<script src="script.js"></script>
 
 </body>
 </html>

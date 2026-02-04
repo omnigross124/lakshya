@@ -6,43 +6,51 @@ function initHeader() {
 
   if (!mobileMenuBtn || !navMenu) return;
 
+  // Always start CLOSED on mobile
+  navMenu.classList.remove("active");
+  const iconInit = mobileMenuBtn.querySelector("i");
+  if (iconInit) {
+    iconInit.classList.remove("fa-times");
+    iconInit.classList.add("fa-bars");
+  }
+
   // Mobile menu toggle
-  mobileMenuBtn.addEventListener("click", function () {
+  mobileMenuBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
     navMenu.classList.toggle("active");
+
     const icon = this.querySelector("i");
+    if (!icon) return;
     icon.classList.toggle("fa-bars");
     icon.classList.toggle("fa-times");
   });
 
-  // Close menu on nav click (only for section links)
-  document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", function () {
-      const href = this.getAttribute("href");
-      if (href && !href.startsWith("#")) return;
+  // Close menu on outside click (mobile)
+  document.addEventListener("click", function (e) {
+    if (!navMenu.classList.contains("active")) return;
 
+    const clickedInsideMenu = navMenu.contains(e.target);
+    const clickedMenuBtn = mobileMenuBtn.contains(e.target);
+
+    if (!clickedInsideMenu && !clickedMenuBtn) {
       navMenu.classList.remove("active");
       const icon = mobileMenuBtn.querySelector("i");
-      icon.classList.remove("fa-times");
-      icon.classList.add("fa-bars");
-    });
+      if (icon) {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+      }
+    }
   });
 
-  // Active nav link on scroll
-  window.addEventListener("scroll", function () {
-    const sections = document.querySelectorAll("section");
-    let current = "";
-
-    sections.forEach(section => {
-      if (pageYOffset >= section.offsetTop - 200) {
-        current = section.id;
+  // ✅ Close menu on ANY nav click (important for page navigation)
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", function () {
+      navMenu.classList.remove("active");
+      const icon = mobileMenuBtn.querySelector("i");
+      if (icon) {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
       }
-    });
-
-    document.querySelectorAll(".nav-link").forEach(link => {
-      link.classList.toggle(
-        "active",
-        link.getAttribute("href") === `#${current}`
-      );
     });
   });
 }
@@ -93,12 +101,7 @@ function startCounters(selector, showPlus = false) {
 }
 
 function initCounters() {
-  // Page 1 – Impact section
-  startCounters(".counter", true);
-
-  // Page 2 – Metrics section
-  startCounters(".metric-value", false);
-
+  // Impact counters (if present)
   const impactSection = document.querySelector(".impact-metrics");
   if (!impactSection) return;
 
@@ -127,32 +130,6 @@ function initJoinButton() {
 
 const translations = {
   en: {
-    hero_title: "Empowering Communities, Transforming Lives",
-    hero_desc:
-      "Lakshya Foundation is a non-profit organization dedicated to sustainable development across 12 key sectors, driving social change through education, healthcare, women empowerment, and community development initiatives.",
-    hero_donate: "Donate Now",
-    hero_volunteer: "Volunteer With Us",
-    hero_csr: "CSR Partnership"
-  },
-
-  hi: {
-    hero_title: "समुदायों को सशक्त बनाना, जीवन को बदलना",
-    hero_desc:
-      "लक्ष्य फाउंडेशन एक गैर-लाभकारी संस्था है जो 12 प्रमुख क्षेत्रों में सतत विकास के लिए कार्य करती है, जिसमें शिक्षा, स्वास्थ्य, महिला सशक्तिकरण और सामुदायिक विकास शामिल हैं।",
-    hero_donate: "अभी दान करें",
-    hero_volunteer: "हमारे साथ स्वयंसेवक बनें",
-    hero_csr: "सीएसआर साझेदारी"
-  },
-
-  mr: {
-    hero_title: "समुदाय सशक्त करणे, जीवन बदलणे",
-    hero_desc:
-      "लक्ष्य फाउंडेशन ही 12 प्रमुख क्षेत्रांमध्ये शाश्वत विकासासाठी कार्य करणारी स्वयंसेवी संस्था आहे, ज्यामध्ये शिक्षण, आरोग्य, महिला सक्षमीकरण आणि समुदाय विकासाचा समावेश आहे.",
-    hero_donate: "आता देणगी द्या",
-    hero_volunteer: "आमच्यासोबत स्वयंसेवक व्हा",
-    hero_csr: "सीएसआर भागीदारी"
-  },
-  en: {
     nav_home: "Home",
     nav_about: "About Us",
     nav_our_work: "Our Work",
@@ -163,7 +140,6 @@ const translations = {
     nav_contact: "Contact Us",
     nav_language: "Languages"
   },
-
   hi: {
     nav_home: "होम",
     nav_about: "हमारे बारे में",
@@ -175,7 +151,6 @@ const translations = {
     nav_contact: "संपर्क करें",
     nav_language: "भाषाएँ"
   },
-
   mr: {
     nav_home: "मुख्यपृष्ठ",
     nav_about: "आमच्याबद्दल",
@@ -189,8 +164,7 @@ const translations = {
   }
 };
 
-
-function setLanguage(lang) {
+function setLanguageTextOnly(lang) {
   localStorage.setItem("siteLang", lang);
 
   document.querySelectorAll("[data-i18n]").forEach(el => {
@@ -202,6 +176,47 @@ function setLanguage(lang) {
 
   document.documentElement.lang = lang;
 }
+
+/* ================= GOOGLE TRANSLATE CONTROL ================= */
+/* ✅ Google loads and calls this function */
+function googleTranslateElementInit() {
+  if (!document.getElementById("google_translate_element")) return;
+
+  // Create widget (hidden by CSS, but still works)
+  new google.translate.TranslateElement(
+    { pageLanguage: "en", autoDisplay: false },
+    "google_translate_element"
+  );
+
+  // Apply saved language after widget becomes ready
+  const savedLang = localStorage.getItem("siteLang") || "en";
+  applyGoogleTranslate(savedLang);
+}
+
+/* ✅ actually switches the whole website language */
+function applyGoogleTranslate(lang) {
+  // Google uses a select dropdown internally.
+  // We wait until it exists and then set its value.
+  const maxTries = 30;
+  let tries = 0;
+
+  const timer = setInterval(() => {
+    tries++;
+
+    const select = document.querySelector("select.goog-te-combo");
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+      clearInterval(timer);
+    }
+
+    if (tries >= maxTries) {
+      clearInterval(timer);
+    }
+  }, 200);
+}
+
+/* ================= LANGUAGE UI ================= */
 
 function initLanguage() {
   const langToggle = document.getElementById("langToggle");
@@ -221,53 +236,33 @@ function initLanguage() {
     langMenu.classList.remove("show");
   });
 
-  // ✅ LANGUAGE CLICK FIX (event delegation)
+  // Click language item
   langMenu.addEventListener("click", function (e) {
     e.stopPropagation();
-
     const item = e.target.closest("[data-lang]");
     if (!item) return;
 
     const lang = item.getAttribute("data-lang");
-    setLanguage(lang);
+
+    // 1) Change custom text (nav labels etc.)
+    setLanguageTextOnly(lang);
+
+    // 2) Change whole website content using Google Translate
+    applyGoogleTranslate(lang);
+
     langMenu.classList.remove("show");
   });
 }
-
 
 /* ================= INITIAL LOAD ================= */
 
 document.addEventListener("DOMContentLoaded", function () {
   const savedLang = localStorage.getItem("siteLang") || "en";
-  setLanguage(savedLang);
+  setLanguageTextOnly(savedLang);
 
-  
-  
+  initHeader();
+  initLanguage();
   initSmoothScroll();
   initCounters();
   initJoinButton();
 });
-/* ================= FORCE INIT AFTER HEADER LOAD ================= */
-
-window.addEventListener("load", function () {
-  // slight delay to ensure header template is mounted
-  setTimeout(() => {
-    initHeader();
-    initLanguage();
-  }, 100);
-});
-document.querySelectorAll(".lang-menu li").forEach(item => {
-  item.addEventListener("click", () => {
-    const lang = item.getAttribute("data-lang");
-
-    const interval = setInterval(() => {
-      const select = document.querySelector("select.goog-te-combo");
-      if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event("change"));
-        clearInterval(interval);
-      }
-    }, 100);
-  });
-});
-
