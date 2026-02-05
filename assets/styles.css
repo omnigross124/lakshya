@@ -3850,3 +3850,26 @@ body {
   left: -9999px;
   top: -9999px;
 }
+.hc-mini-stats{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:14px 0 8px;
+}
+.hc-mini-stats .chip{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+@media(max-width:768px){
+  .hc-mini-stats .chip{ width:100%; border-radius:14px; }
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
