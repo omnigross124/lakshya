@@ -218,8 +218,11 @@
             z-index: 999;
         }
         
-        .has-mega-menu:hover .mega-menu {
+        /*.has-mega-menu:hover .mega-menu {
             display: grid;
+        }*/
+        .mega-menu {
+            display: none;
         }
         
         .mega-menu-column h4 {
@@ -2483,10 +2486,10 @@ body {
   }
 }
 
-/* Desktop hover (keep working) */
+/* Desktop hover (keep working) 
 .has-mega-menu:hover .mega-menu {
   display: block;
-}
+}*/
 
 /* Mobile: completely disable mega menu */
 @media (max-width: 768px) {
