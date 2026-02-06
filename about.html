@@ -1,210 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Lakshya Foundation</title>
 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- ✅ Sidebar layout CSS (mobile first) -->
+  <style>
+    /* Wraps content + sidebar */
+    .layout-wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Mobile first: single column */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Main site content */
+    .main-content {
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* Sidebar */
+    .right-sidebar {
+      width: 100%;
+    }
+
+    /* Desktop layout: sidebar on right */
+    @media (min-width: 992px) {
+      .layout-grid {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 24px;
+      }
+    }
+
+    /* Sidebar UI */
+    .rs-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .rs-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #c00000;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rs-event {
+      padding-left: 10px;
+      border-left: 3px solid rgba(192, 0, 0, 0.25);
+      margin-bottom: 12px;
+    }
+
+    .rs-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .rs-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #c00000;
+    }
+
+    .rs-loc {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .rs-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rs-links li {
+      margin: 10px 0;
+    }
+
+    .rs-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .rs-links a:hover {
+      color: #c00000;
+    }
+
+    .rs-help p {
+      font-size: 14px;
+      margin: 8px 0;
+      color: #333;
+    }
+
+    .rs-help i {
+      color: #c00000;
+      margin-right: 6px;
+    }
+
+    /* Mobile: sidebar comes after content naturally */
+    @media (max-width: 991px) {
+      .right-sidebar {
+        margin-top: 20px;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-          <div class="header-left">
-    
-    <div class="logo">
-      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
-    </div>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container header-container">
+      <div class="header-left">
 
-    <div class="logo-text">
-      <img src="assets/logo2.png" alt="Lakshya Foundation Text">
-    </div>
-
-  </div>
-            
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-            <nav>
-  <ul class="nav-menu" id="navMenu">
-
-    <li>
-      <a href="index.html" class="nav-link active" data-i18n="nav_home">
-        Home
-      </a>
-    </li>
-
-    <li>
-      <a href="about.html" class="nav-link" data-i18n="nav_about">
-        About Us
-      </a>
-    </li>
-
-    <li class="has-mega-menu">
-      <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">
-        Our Work
-      </a>
-
-      <div class="mega-menu">
-
-        <div class="mega-menu-column">
-          <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
-          <ul class="mega-menu-links">
-            <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
-            <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
-            <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
-            <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
-          </ul>
+        <div class="logo">
+          <img src="assets/logo.png" alt="Lakshya Foundation Logo">
         </div>
 
-        <div class="mega-menu-column">
-          <h4 data-i18n="nav_development_areas">Development Areas</h4>
-          <ul class="mega-menu-links">
-            <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
-            <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
-            <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
-            <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
-          </ul>
-        </div>
-
-        <div class="mega-menu-column">
-          <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
-          <ul class="mega-menu-links">
-            <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
-            <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
-            <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
-            <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
-          </ul>
-        </div>
-
-        <div class="mega-menu-column">
-          <h4 data-i18n="nav_get_involved">Get Involved</h4>
-          <ul class="mega-menu-links">
-            <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
-            <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
-            <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
-            <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
-          </ul>
+        <div class="logo-text">
+          <img src="assets/logo2.png" alt="Lakshya Foundation Text">
         </div>
 
       </div>
-    </li>
 
-    <li>
-      <a href="programs.html" class="nav-link" data-i18n="nav_programs">
-        Programs
-      </a>
-    </li>
-    
-    <li>
-      <a href="csr.html" class="nav-link" data-i18n="nav_csr">
-        CSR
-      </a>
-    </li> 
+      <div class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </div>
 
-    <li>
-      <a href="impact.html" class="nav-link" data-i18n="nav_impact">
-        Impact
-      </a>
-    </li>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
 
-    <li>
-      <a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">
-        Get Involved
-      </a>
-    </li>
+          <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About Us</a></li>
 
-    <li>
-      <a href="transparency.html" class="nav-link" data-i18n="nav_transparency">
-        Transparency
-      </a>
-    </li>
+          <li class="has-mega-menu">
+            <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">Our Work</a>
 
-    <li>
-      <a href="contact.html" class="nav-link" data-i18n="nav_contact">
-        Contact Us
-      </a>
-    </li>
+            <div class="mega-menu">
 
-    <li class="lang-item">
-      <button type="button" id="langToggle" data-i18n="nav_language">
-        Languages
-      </button>
+              <div class="mega-menu-column">
+                <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
+                <ul class="mega-menu-links">
+                  <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
+                  <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
+                  <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
+                  <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
+                </ul>
+              </div>
 
-      <ul class="lang-menu">
-        <li data-lang="en">English</li>
-        <li data-lang="hi">हिंदी</li>
-        <li data-lang="mr">मराठी</li>
-      </ul>
-    </li>
+              <div class="mega-menu-column">
+                <h4 data-i18n="nav_development_areas">Development Areas</h4>
+                <ul class="mega-menu-links">
+                  <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
+                  <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
+                  <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
+                  <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
+                </ul>
+              </div>
 
-  </ul>
-</nav>
+              <div class="mega-menu-column">
+                <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
+                <ul class="mega-menu-links">
+                  <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
+                  <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
+                  <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
+                  <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
+                </ul>
+              </div>
 
-        </div>
+              <div class="mega-menu-column">
+                <h4 data-i18n="nav_get_involved">Get Involved</h4>
+                <ul class="mega-menu-links">
+                  <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+                  <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+                  <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
+                  <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
+                </ul>
+              </div>
 
+            </div>
+          </li>
 
-    </header>
+          <li><a href="programs.html" class="nav-link" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="csr.html" class="nav-link" data-i18n="nav_csr">CSR</a></li>
+          <li><a href="impact.html" class="nav-link" data-i18n="nav_impact">Impact</a></li>
+          <li><a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">Get Involved</a></li>
+          <li><a href="transparency.html" class="nav-link" data-i18n="nav_transparency">Transparency</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact Us</a></li>
+
+          <li class="lang-item">
+            <button type="button" id="langToggle" data-i18n="nav_language">Languages</button>
+            <ul class="lang-menu">
+              <li data-lang="en">English</li>
+              <li data-lang="hi">हिंदी</li>
+              <li data-lang="mr">मराठी</li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
 <div id="google_translate_element" style="padding:10px;"></div>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<!-- 1️⃣ ABOUT HERO -->
-<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b');">
-  <div class="container">
-    <h1>About Lakshya Foundation</h1>
-    <p>Empowering communities through education, healthcare, and inclusive development.</p>
-  </div>
-</section>
+  <!-- ✅ Layout wrapper STARTS here (between header and footer) -->
+  <div class="layout-wrap">
+    <div class="layout-grid">
 
-<!-- 2️⃣ WHO WE ARE -->
-<section class="section who-we-are">
-  <div class="container two-col">
-    
-    <!-- Content Column -->
-    <div class="who-content">
-      
-      <h2>Who We Are</h2>
+      <!-- ✅ MAIN CONTENT -->
+      <div class="main-content">
 
-      <p class="lead">
-        Lakshya Foundation is a registered non-profit organization committed to
-        building resilient communities through sustainable social development initiatives across India.
-      </p>
+        <!-- 1️⃣ ABOUT HERO -->
+        <section class="hero" style="background-image:url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b');">
+          <div class="container">
+            <h1>About Lakshya Foundation</h1>
+            <p>Empowering communities through education, healthcare, and inclusive development.</p>
+          </div>
+        </section>
 
-      <p>
-        We work at the grassroots level to address critical challenges in
-        <strong>education, healthcare, women empowerment, skill development,</strong>
-        and community welfare. Our approach combines compassion, innovation,
-        and measurable impact to create long-term change.
-      </p>
+        <!-- 2️⃣ WHO WE ARE -->
+        <section class="section who-we-are">
+          <div class="container two-col">
 
-      <ul class="impact-list">
-        <li> Empowering underprivileged communities</li>
-        <li> Promoting inclusive and sustainable growth</li>
-        <li> Partnering with institutions & volunteers</li>
-      </ul>
+            <div class="who-content">
+              <h2>Who We Are</h2>
 
-      <a href="#our-mission" class="btn btn-primary">
-        Learn More About Our Mission
-      </a>
-    </div>
+              <p class="lead">
+                Lakshya Foundation is a registered non-profit organization committed to
+                building resilient communities through sustainable social development initiatives across India.
+              </p>
 
-    <!-- Image Column -->
-    <div class="who-image">
-      <img 
-        src="https://images.unsplash.com/photo-1509099836639-18ba1795216d" 
-        alt="Lakshya Foundation community development initiatives">
-    </div>
+              <p>
+                We work at the grassroots level to address critical challenges in
+                <strong>education, healthcare, women empowerment, skill development,</strong>
+                and community welfare. Our approach combines compassion, innovation,
+                and measurable impact to create long-term change.
+              </p>
 
-  </div>
-</section>
+              <ul class="impact-list">
+                <li> Empowering underprivileged communities</li>
+                <li> Promoting inclusive and sustainable growth</li>
+                <li> Partnering with institutions & volunteers</li>
+              </ul>
 
+              <a href="#our-mission" class="btn btn-primary">
+                Learn More About Our Mission
+              </a>
+            </div>
 
-<!-- 3️⃣ OUR JOURNEY -->
+            <div class="who-image">
+              <img
+                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d"
+                alt="Lakshya Foundation community development initiatives">
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ✅ ALL your sections remain EXACTLY same... -->
+        <!-- (I’m not changing your content, just keeping it as is) -->
+
+        <!-- 3️⃣ OUR JOURNEY -->
 <section class="section bg-light our-journey">
   <div class="container">
 
@@ -1169,128 +1248,169 @@
   </div>
 </section>
 
+        <!-- 2️⃣2️⃣ CALL TO ACTION -->
+        <section class="section cta">
+          <div class="container" style="text-align:center; max-width: 720px;">
+            <h2>Be a Part of Our Mission</h2>
+            <p>
+              Join us as a donor, volunteer, or CSR partner and help create meaningful, lasting change in communities.
+            </p>
 
-<!-- 2️⃣2️⃣ CALL TO ACTION -->
-<section class="section cta">
-  <div class="container" style="text-align:center; max-width: 720px;">
-
-    <h2>Be a Part of Our Mission</h2>
-    <p>
-      Join us as a donor, volunteer, or CSR partner and help create meaningful, lasting change in communities.
-    </p>
-
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-primary">Get Involved</a>
-      <a href="donate.html" class="btn btn-secondary">Donate Now</a>
-    </div>
-
-  </div>
-</section>
-<!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-              <div class="logo">
-      <img src="assets/logo.png" alt="Lakshya Foundation Logo">
-    </div>
-
-    
-                <div class="footer-column">
-                    <!-- <h3>Lakshya Foundation</h3> -->
-                    <p>Empowering communities through sustainable development initiatives across 12 key sectors. Registered under the Maharashtra Public Trusts Act, 1950.</p>
-                    <p style="margin-top: 15px;"><strong>Registration:</strong> F-15079</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Our Sectors</h3>
-                    <ul class="footer-links">
-                        <li><a href="#education">Education & Literacy</a></li>
-                        <li><a href="#healthcare">Healthcare</a></li>
-                        <li><a href="#women">Women Empowerment</a></li>
-                        <li><a href="#child">Child Welfare</a></li>
-                        <li><a href="#rural">Rural Development</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Get Involved</h3>
-                    <ul class="footer-links">
-                        <li><a href="#donate">Donate Now</a></li>
-                        <li><a href="#volunteer">Volunteer With Us</a></li>
-                        <li><a href="#partner">Partner With Us</a></li>
-                        <li><a href="#careers">Careers</a></li>
-                        <li><a href="#fundraise">Fundraise for a Cause</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Transparency</h3>
-                    <ul class="footer-links">
-                        <li><a href="#financials">Financial Statements</a></li>
-                        <li><a href="#annual-reports">Annual Reports</a></li>
-                        <li><a href="#policies">Policies & Disclosures</a></li>
-                        <li><a href="#legal">Legal & Registration</a></li>
-                        <li><a href="#grievance">Grievance Redressal</a></li>
-                    </ul>
-                </div>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-primary">Get Involved</a>
+              <a href="donate.html" class="btn btn-secondary">Donate Now</a>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2026 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
-               <p class="footer-credit">
-  Designed & Developed by 
-  <a href="https://omnigross.in" target="_blank" rel="noopener">
-    Omnigross
-  </a>
- 
-</p>
+          </div>
+        </section>
 
-            </div>
+      </div><!-- ✅ IMPORTANT: closes .main-content -->
+
+      <!-- ✅ RIGHT SIDEBAR (desktop right, mobile last) -->
+      <aside class="right-sidebar">
+
+        <div class="rs-card">
+          <h3 class="rs-title"><i class="fa-solid fa-calendar-days"></i> Upcoming Events</h3>
+
+          <div class="rs-event">
+            <div class="rs-date">12 Feb 2026</div>
+            <div class="rs-name">Free Health Camp</div>
+            <div class="rs-loc">Pune, Maharashtra</div>
+          </div>
+
+          <div class="rs-event">
+            <div class="rs-date">25 Feb 2026</div>
+            <div class="rs-name">Women Empowerment Workshop</div>
+            <div class="rs-loc">Ahmednagar</div>
+          </div>
+
+          <div class="rs-event">
+            <div class="rs-date">10 Mar 2026</div>
+            <div class="rs-name">Education Awareness Drive</div>
+            <div class="rs-loc">Satara District</div>
+          </div>
         </div>
-    </footer>
 
+        <div class="rs-card">
+          <h3 class="rs-title"><i class="fa-solid fa-link"></i> Quick Links</h3>
+          <ul class="rs-links">
+            <li><a href="programs.html">Our Programs</a></li>
+            <li><a href="volunteer.html">Become a Volunteer</a></li>
+            <li><a href="donate.html">Donate Now</a></li>
+          </ul>
+        </div>
 
+        <div class="rs-card">
+          <h3 class="rs-title">Need Help?</h3>
+          <div class="rs-help">
+            <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> +91 9XXXXXXXXX</p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> info@lakshyafoundation.org</p>
+          </div>
+        </div>
 
-<script src="script.js"></script>
+      </aside>
 
- <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll(".counter");
-  let started = false;
+    </div>
+  </div>
+  <!-- ✅ Layout wrapper ENDS here -->
 
-  const startCounting = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      const duration = 2000; // total animation time (ms)
-      const stepTime = Math.max(Math.floor(duration / target), 20);
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+        </div>
 
-      let count = 0;
-      const increment = Math.ceil(target / (duration / stepTime));
+        <div class="footer-column">
+          <p>Empowering communities through sustainable development initiatives across 12 key sectors. Registered under the Maharashtra Public Trusts Act, 1950.</p>
+          <p style="margin-top: 15px;"><strong>Registration:</strong> F-15079</p>
+        </div>
 
-      const updateCount = () => {
-        count += increment;
-        if (count >= target) {
-          counter.innerText = target.toLocaleString() + "+";
-        } else {
-          counter.innerText = count.toLocaleString();
-          setTimeout(updateCount, stepTime);
-        }
+        <div class="footer-column">
+          <h3>Our Sectors</h3>
+          <ul class="footer-links">
+            <li><a href="#education">Education & Literacy</a></li>
+            <li><a href="#healthcare">Healthcare</a></li>
+            <li><a href="#women">Women Empowerment</a></li>
+            <li><a href="#child">Child Welfare</a></li>
+            <li><a href="#rural">Rural Development</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Get Involved</h3>
+          <ul class="footer-links">
+            <li><a href="#donate">Donate Now</a></li>
+            <li><a href="#volunteer">Volunteer With Us</a></li>
+            <li><a href="#partner">Partner With Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#fundraise">Fundraise for a Cause</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Transparency</h3>
+          <ul class="footer-links">
+            <li><a href="#financials">Financial Statements</a></li>
+            <li><a href="#annual-reports">Annual Reports</a></li>
+            <li><a href="#policies">Policies & Disclosures</a></li>
+            <li><a href="#legal">Legal & Registration</a></li>
+            <li><a href="#grievance">Grievance Redressal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2026 Lakshya Foundation. All Rights Reserved. | <a href="#privacy" style="color: #aaa;">Privacy Policy</a> | <a href="#terms" style="color: #aaa;">Terms & Conditions</a> | <a href="#refund" style="color: #aaa;">Refund Policy</a></p>
+        <p class="footer-credit">
+          Designed & Developed by
+          <a href="https://omnigross.in" target="_blank" rel="noopener">Omnigross</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".counter");
+      let started = false;
+
+      const startCounting = () => {
+        counters.forEach(counter => {
+          const target = +counter.getAttribute("data-target");
+          const duration = 2000;
+          const stepTime = Math.max(Math.floor(duration / target), 20);
+
+          let count = 0;
+          const increment = Math.ceil(target / (duration / stepTime));
+
+          const updateCount = () => {
+            count += increment;
+            if (count >= target) {
+              counter.innerText = target.toLocaleString() + "+";
+            } else {
+              counter.innerText = count.toLocaleString();
+              setTimeout(updateCount, stepTime);
+            }
+          };
+
+          updateCount();
+        });
       };
 
-      updateCount();
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && !started) {
+          started = true;
+          startCounting();
+        }
+      }, { threshold: 0.4 });
+
+      const stats = document.querySelector(".impact-stats");
+      if (stats) observer.observe(stats);
     });
-  };
-
-  const observer = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !started) {
-      started = true;
-      startCounting();
-    }
-  }, { threshold: 0.4 });
-
-  observer.observe(document.querySelector(".impact-stats"));
-});
-</script>
+  </script>
 
 </body>
 </html>

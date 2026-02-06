@@ -9,6 +9,122 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+  <!-- ✅ Sidebar layout CSS (mobile first) -->
+  <style>
+    /* Wraps content + sidebar */
+    .layout-wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Mobile first: single column */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Main site content */
+    .main-content {
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* Sidebar */
+    .right-sidebar {
+      width: 100%;
+    }
+
+    /* Desktop layout: sidebar on right */
+    @media (min-width: 992px) {
+      .layout-grid {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 24px;
+      }
+    }
+
+    /* Sidebar UI */
+    .rs-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .rs-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #c00000;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rs-event {
+      padding-left: 10px;
+      border-left: 3px solid rgba(192, 0, 0, 0.25);
+      margin-bottom: 12px;
+    }
+
+    .rs-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .rs-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #c00000;
+    }
+
+    .rs-loc {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .rs-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rs-links li {
+      margin: 10px 0;
+    }
+
+    .rs-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .rs-links a:hover {
+      color: #c00000;
+    }
+
+    .rs-help p {
+      font-size: 14px;
+      margin: 8px 0;
+      color: #333;
+    }
+
+    .rs-help i {
+      color: #c00000;
+      margin-right: 6px;
+    }
+
+    /* Mobile: sidebar comes after content naturally */
+    @media (max-width: 991px) {
+      .right-sidebar {
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -153,6 +269,12 @@
     </header>
 <div id="google_translate_element" style="padding:10px;"></div>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- ✅ Layout wrapper STARTS here (between header and footer) -->
+  <div class="layout-wrap">
+    <div class="layout-grid">
+
+      <!-- ✅ MAIN CONTENT -->
+      <div class="main-content">
   <!-- HERO -->
   <section class="section rural-hero">
     <div class="container two-col">
@@ -800,7 +922,55 @@
       <button id="donateBtn">Donate Now</button>
     </div>
   </section>
+</div><!-- ✅ IMPORTANT: closes .main-content -->
 
+      <!-- ✅ RIGHT SIDEBAR (desktop right, mobile last) -->
+      <aside class="right-sidebar">
+
+        <div class="rs-card">
+          <h3 class="rs-title"><i class="fa-solid fa-calendar-days"></i> Upcoming Events</h3>
+
+          <div class="rs-event">
+            <div class="rs-date">12 Feb 2026</div>
+            <div class="rs-name">Free Health Camp</div>
+            <div class="rs-loc">Pune, Maharashtra</div>
+          </div>
+
+          <div class="rs-event">
+            <div class="rs-date">25 Feb 2026</div>
+            <div class="rs-name">Women Empowerment Workshop</div>
+            <div class="rs-loc">Ahmednagar</div>
+          </div>
+
+          <div class="rs-event">
+            <div class="rs-date">10 Mar 2026</div>
+            <div class="rs-name">Education Awareness Drive</div>
+            <div class="rs-loc">Satara District</div>
+          </div>
+        </div>
+
+        <div class="rs-card">
+          <h3 class="rs-title"><i class="fa-solid fa-link"></i> Quick Links</h3>
+          <ul class="rs-links">
+            <li><a href="programs.html">Our Programs</a></li>
+            <li><a href="volunteer.html">Become a Volunteer</a></li>
+            <li><a href="donate.html">Donate Now</a></li>
+          </ul>
+        </div>
+
+        <div class="rs-card">
+          <h3 class="rs-title">Need Help?</h3>
+          <div class="rs-help">
+            <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> +91 9XXXXXXXXX</p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> info@lakshyafoundation.org</p>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+  <!-- ✅ Layout wrapper ENDS here -->
   <!-- Footer -->
     <footer>
         <div class="container">

@@ -3876,3 +3876,53 @@ body {
   object-fit: cover;
   display: block;
 }
+/* =========================================
+   FIX: Impact section layout (all pages)
+   Make each .stat a separate responsive card
+   ========================================= */
+
+.impact-stats{
+  /* remove the “single big box” look from other pages */
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  /* responsive cards like index page */
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+  gap: 22px !important;
+  margin-top: 40px !important;
+  align-items: stretch !important;
+}
+
+.impact-stats .stat{
+  background: #fff !important;
+  border-radius: 18px !important;
+  padding: 30px 22px !important;
+  text-align: center !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06) !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* remove the forced “bottom centered” layout */
+.impact-stats .stat-center{
+  grid-column: auto !important;
+}
+
+/* keep numbers neat on mobile */
+.impact-stats .stat h3{
+  line-height: 1.1 !important;
+  margin: 0 0 10px !important;
+}
+
+@media (max-width: 480px){
+  .impact-stats{
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  .impact-stats .stat{
+    padding: 22px 16px !important;
+  }
+}
