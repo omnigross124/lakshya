@@ -26,7 +26,69 @@
   <link rel="alternate" hreflang="en" href="https://yourwebsite.com/">
   <link rel="alternate" hreflang="hi" href="https://yourwebsite.com/?lang=hi">
   <link rel="alternate" hreflang="mr" href="https://yourwebsite.com/?lang=mr">
+<style>/* ================= HERO SLIDER IMAGE FIX ================= */
 
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 420px;          /* desktop height */
+  overflow: hidden;
+  background: transparent; /* no black background */
+  margin: 0;              /* prevents unwanted gaps */
+  padding: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;       /* fills the slider */
+  background-position: center;  /* keep center crop */
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero-slider {
+    height: 320px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 240px; /* 🔥 this matches your screenshot style */
+  }
+
+  .hero-slide {
+    background-position: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-slider {
+    height: 210px;
+  }
+}
+
+/* Hero content below slider */
+.hero-content {
+  padding: 40px 0;
+}
+.hero-slider::before,
+.hero-slider::after {
+  content: none !important;
+}
+
+</style>
+</style>
+</style>
   <style>
     /* Wraps content + sidebar */
     .layout-wrap {
