@@ -1,62 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSR Partnerships | Lakshya Foundation</title>
+
+  <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Styles -->
   <link rel="stylesheet" href="assets/styles.css">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Work | Lakshya Foundation</title>
+  <!-- CSR Page Styles -->
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
 
-  <script defer src="script.js"></script>
+    .csr-hero {
+      background: linear-gradient(180deg, rgba(220,20,60,0.08), #fff);
+      padding: 70px 0;
+    }
 
+    .csr-hero-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .csr-hero-text h1 {
+      font-size: 2.3rem;
+      margin-bottom: 8px;
+    }
+
+    .csr-hero-text h2 {
+      font-size: 1.3rem;
+      color: #d32f2f;
+      margin-bottom: 16px;
+    }
+
+    .csr-hero-text p {
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .csr-actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .csr-box {
+      background: #fff;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .csr-box h3 {
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .csr-box ul {
+      padding-left: 18px;
+      line-height: 1.9;
+      color: #444;
+    }
+
+    .csr-sections {
+      padding: 60px 0;
+      background: #fafafa;
+    }
+
+    .csr-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .csr-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .csr-card i {
+      font-size: 2rem;
+      color: #d32f2f;
+      margin-bottom: 10px;
+    }
+
+    /* ================= CSR CONTACT SECTION ================= */
+
+.csr-contact {
+  background: #d32f2f; /* strong red background */
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.csr-contact h2 {
+  color: #ffffff;              /* FIX: heading white */
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.csr-contact p {
+  color: #fbeaea;
+  max-width: 720px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* CSR Button */
+.csr-contact .btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  border: 2px solid #ffffff;   /* white border */
+  color: #ffffff;              /* white text */
+  background: transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover Effect */
+.csr-contact .btn:hover {
+  background: #ffffff;         /* white background */
+  color: #d32f2f;               /* red text */
+  border-color: #ffffff;
+}
+
+
+    @media (max-width: 992px) {
+      .csr-hero-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .csr-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
   <!-- ✅ Sidebar layout CSS (mobile first) -->
   <style>
     /* Wraps content + sidebar */
-    .layout-wrap{
+    .layout-wrap {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 16px;
     }
 
     /* Mobile first: single column */
-    .layout-grid{
+    .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 20px;
       align-items: start;
     }
 
-    /* Main content */
-    .main-content{
+    /* Main site content */
+    .main-content {
       width: 100%;
       min-width: 0;
     }
 
     /* Sidebar */
-    .right-sidebar{
+    .right-sidebar {
       width: 100%;
     }
 
-    /* Desktop: sidebar on right */
-    @media (min-width: 992px){
-      .layout-grid{
+    /* Desktop layout: sidebar on right */
+    @media (min-width: 992px) {
+      .layout-grid {
         grid-template-columns: minmax(0, 1fr) 320px;
         gap: 24px;
       }
     }
 
     /* Sidebar UI */
-    .rs-card{
+    .rs-card {
       background: #ffffff;
       border-radius: 14px;
       padding: 16px;
       margin-bottom: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     }
 
-    .rs-title{
+    .rs-title {
       font-size: 18px;
       font-weight: 700;
       color: #c00000;
@@ -66,34 +206,72 @@
       gap: 8px;
     }
 
-    .rs-event{
+    .rs-event {
       padding-left: 10px;
-      border-left: 3px solid rgba(192,0,0,0.25);
+      border-left: 3px solid rgba(192, 0, 0, 0.25);
       margin-bottom: 12px;
     }
 
-    .rs-date{ font-size: 13px; font-weight: 600; color: #333; }
-    .rs-name{ font-size: 14px; font-weight: 700; color: #c00000; }
-    .rs-loc{ font-size: 13px; color: #666; }
+    .rs-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+    }
 
-    .rs-links{ list-style: none; padding: 0; margin: 0; }
-    .rs-links li{ margin: 10px 0; }
-    .rs-links a{ text-decoration: none; font-weight: 600; color: #222; }
-    .rs-links a:hover{ color: #c00000; }
+    .rs-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #c00000;
+    }
 
-    .rs-help p{ font-size: 14px; margin: 8px 0; color: #333; }
-    .rs-help i{ color: #c00000; margin-right: 6px; }
+    .rs-loc {
+      font-size: 13px;
+      color: #666;
+    }
 
-    /* Mobile: sidebar appears after content naturally */
-    @media (max-width: 991px){
-      .right-sidebar{ margin-top: 20px; }
+    .rs-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rs-links li {
+      margin: 10px 0;
+    }
+
+    .rs-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .rs-links a:hover {
+      color: #c00000;
+    }
+
+    .rs-help p {
+      font-size: 14px;
+      margin: 8px 0;
+      color: #333;
+    }
+
+    .rs-help i {
+      color: #c00000;
+      margin-right: 6px;
+    }
+
+    /* Mobile: sidebar comes after content naturally */
+    @media (max-width: 991px) {
+      .right-sidebar {
+        margin-top: 20px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header & Navigation -->
+<!-- Header & Navigation -->
   <header>
     <div class="container header-container">
       <div class="header-left">
@@ -122,6 +300,7 @@
             <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">Our Work</a>
 
             <div class="mega-menu">
+
               <div class="mega-menu-column">
                 <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
                 <ul class="mega-menu-links">
@@ -161,6 +340,7 @@
                   <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
                 </ul>
               </div>
+
             </div>
           </li>
 
@@ -188,189 +368,113 @@
     <li data-lang="mr">मराठी</li>
   </ul>
 </li> -->
+
+
         </ul>
       </nav>
+
     </div>
   </header>
 
   <div id="google_translate_element" style="padding:10px;"></div>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  
-
-        <!-- OUR WORK HERO -->
-        <section class="page-header">
-          <div class="container">
-            <h1>Our Work</h1>
-            <p>
-              At Lakshya Foundation, our work focuses on sustainable development across key sectors
-              that directly improve lives in underserved communities. We collaborate with local
-              leaders, schools, health workers, and partners to create measurable, long-term impact.
-            </p>
-
-            <div class="hero-btns" style="margin-top:25px;">
-              <a href="donate.html" class="btn">Donate Now</a>
-              <a href="volunteer.html" class="btn btn-outline">Volunteer With Us</a>
-            </div>
-          </div>
-        </section>
-<!-- ✅ LAYOUT START (between header and footer) -->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- ✅ Layout wrapper STARTS here (between header and footer) -->
   <div class="layout-wrap">
     <div class="layout-grid">
 
       <!-- ✅ MAIN CONTENT -->
       <div class="main-content">
-        <main class="page-content">
 
-          <!-- Overview Cards -->
-          <section class="section bg-light">
-            <div class="container">
-              <h2 class="center">Our Key Focus Areas</h2>
+  <!-- CSR HERO -->
+  <section class="csr-hero">
+    <div class="container">
+      <div class="csr-hero-wrap">
 
-              <div class="cards icon-cards">
+        <div class="csr-hero-text">
+          <h1>CSR Partnerships</h1>
+          <h2>Creating Measurable Social Impact Together</h2>
 
-                <div class="card">
-                  <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                  <h3>Education & Literacy</h3>
-                  <p>
-                    Improving learning outcomes through digital classrooms, scholarships,
-                    teacher support, and literacy drives for children and adults.
-                  </p>
-                  <a href="education.html" class="btn btn-outline">Explore</a>
-                </div>
+          <p>
+            Lakshya Foundation collaborates with corporates to design and implement
+            high-impact, CSR-compliant programs aligned with Schedule VII of the Companies Act, 2013.
+          </p>
 
-                <div class="card">
-                  <div class="icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                  <h3>Healthcare & Public Health</h3>
-                  <p>
-                    Preventive care, medical camps, health awareness sessions, and support
-                    for maternal & child health in rural communities.
-                  </p>
-                  <a href="healthcare.html" class="btn btn-outline">Explore</a>
-                </div>
+          <p>
+            We offer end-to-end CSR execution — from need assessment and implementation
+            to impact reporting and statutory audits.
+          </p>
 
-                <div class="card">
-                  <div class="icon"><i class="fa-solid fa-female"></i></div>
-                  <h3>Women Empowerment</h3>
-                  <p>
-                    Skill development, entrepreneurship support, leadership programs,
-                    and initiatives that strengthen women’s independence and confidence.
-                  </p>
-                  <a href="women-empowerment.html" class="btn btn-outline">Explore</a>
-                </div>
+          <div class="csr-actions">
+            <a href="#csr-contact" class="btn btn-primary">Request CSR Proposal</a>
+            <a href="#csr-models" class="btn btn-outline">Explore Partnership Models</a>
+          </div>
+        </div>
 
-                <div class="card">
-                  <div class="icon"><i class="fa-solid fa-child"></i></div>
-                  <h3>Child Welfare & Protection</h3>
-                  <p>
-                    Protecting children’s rights through education access, nutrition support,
-                    safety awareness, and community-based child protection initiatives.
-                  </p>
-                  <a href="child-welfare.html" class="btn btn-outline">Explore</a>
-                </div>
+        <div class="csr-box">
+          <h3>End-to-End CSR Execution</h3>
+          <ul>
+            <li>Baseline Study & Need Assessment</li>
+            <li>Project Design & Budgeting</li>
+            <li>On-ground Implementation</li>
+            <li>Monitoring, KPIs & Dashboards</li>
+            <li>Impact Reporting</li>
+            <li>Audit & Compliance Support</li>
+          </ul>
+        </div>
 
-                <div class="card">
-                  <div class="icon"><i class="fa-solid fa-house"></i></div>
-                  <h3>Rural Development</h3>
-                  <p>
-                    Strengthening villages through livelihood support, agriculture guidance,
-                    infrastructure improvement, and community mobilization.
-                  </p>
-                  <a href="rural-development.html" class="btn btn-outline">Explore</a>
-                </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="card">
-                  <div class="icon"><i class="fa-solid fa-droplet"></i></div>
-                  <h3>Water & Sanitation</h3>
-                  <p>
-                    Clean water access, sanitation improvement, hygiene education, and
-                    awareness drives in schools and communities.
-                  </p>
-                  <a href="water-sanitation.html" class="btn btn-outline">Explore</a>
-                </div>
+  <!-- CSR MODELS -->
+  <section class="csr-sections" id="csr-models">
+    <div class="container">
+      <h2 class="section-title">CSR Partnership Models</h2>
 
-                <div class="card">
-                  <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-                  <h3>Disaster Relief</h3>
-                  <p>
-                    Rapid emergency response with relief kits, medical support, and
-                    rehabilitation efforts for affected families.
-                  </p>
-                  <a href="disaster-relief.html" class="btn btn-outline">Explore</a>
-                </div>
+      <div class="csr-grid">
+        <div class="csr-card">
+          <i class="fas fa-school"></i>
+          <h4>Education & Skill Development</h4>
+          <p>Digital classrooms, scholarships, literacy programs, and youth skill training.</p>
+        </div>
 
-                <div class="card">
-                  <div class="icon"><i class="fa-solid fa-wheelchair"></i></div>
-                  <h3>Disability Inclusion</h3>
-                  <p>
-                    Promoting equal opportunities through assistive support, inclusive education,
-                    skill training, and community awareness.
-                  </p>
-                  <a href="disability.html" class="btn btn-outline">Explore</a>
-                </div>
+        <div class="csr-card">
+          <i class="fas fa-heartbeat"></i>
+          <h4>Healthcare & Nutrition</h4>
+          <p>Medical camps, maternal health, mobile clinics, and nutrition programs.</p>
+        </div>
 
-              </div>
-            </div>
-          </section>
+        <div class="csr-card">
+          <i class="fas fa-female"></i>
+          <h4>Women Empowerment</h4>
+          <p>Livelihoods, SHGs, entrepreneurship, leadership & financial inclusion.</p>
+        </div>
 
-          <!-- How We Work -->
-          <section class="section light impact-section">
-            <div class="container">
-              <h2 class="section-title">How We Work</h2>
-              <p class="section-subtitle">
-                <br>
-                Our approach ensures transparency, community participation, and sustainable outcomes.
-              </p>
+        <div class="csr-card">
+          <i class="fas fa-leaf"></i>
+          <h4>Rural & Sustainable Development</h4>
+          <p>Water, sanitation, livelihoods, environment, and village development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-              <div class="grid-4 how-we-work">
-                <div class="info-card">
-                  <div class="icon-circle"><i class="fas fa-search-location"></i></div>
-                  <h4>Identify Community Needs</h4>
-                  <p>We conduct surveys and consult local leaders to understand real challenges.</p>
-                </div>
+  <!-- CSR CONTACT -->
+  <section class="csr-contact" id="csr-contact">
+    <div class="container">
+      <h2>Let’s Build Impact Together</h2>
+      <p>
+        Partner with Lakshya Foundation to design CSR initiatives that deliver measurable,
+        compliant, and long-term social impact.
+      </p>
+      <a href="contact.html" class="btn btn-outline">Contact Our Team</a>
+    </div>
+  </section>
 
-                <div class="info-card">
-                  <div class="icon-circle"><i class="fas fa-people-group"></i></div>
-                  <h4>Plan With Communities</h4>
-                  <p>Programs are designed with community participation for long-term success.</p>
-                </div>
 
-                <div class="info-card">
-                  <div class="icon-circle"><i class="fas fa-hand-holding-heart"></i></div>
-                  <h4>Deliver & Support</h4>
-                  <p>We implement programs through volunteers, field teams, and partner networks.</p>
-                </div>
+</div><!-- ✅ IMPORTANT: closes .main-content -->
 
-                <div class="info-card">
-                  <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
-                  <h4>Measure Impact</h4>
-                  <p>We track outcomes, share results, and improve programs continuously.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- CTA -->
-          <section class="section cta-section">
-            <div class="container cta-box">
-              <h2>Be a Part of the Change</h2>
-              <p>
-                Your support helps us deliver education, healthcare, empowerment, and community development
-                programs where they are needed the most.
-              </p>
-
-              <div class="cta-actions">
-                <a href="donate.html" class="btn primary-btn">Donate Now</a>
-                <a href="volunteer.html" class="btn outline-btn">Become a Volunteer</a>
-              </div>
-            </div>
-          </section>
-
-        </main>
-
-      </div><!-- ✅ closes .main-content -->
-
-      <!-- ✅ RIGHT SIDEBAR -->
+      <!-- ✅ RIGHT SIDEBAR (desktop right, mobile last) -->
       <aside class="right-sidebar">
 
         <div class="rs-card">
@@ -416,9 +520,9 @@
 
     </div>
   </div>
-  <!-- ✅ LAYOUT END -->
+  <!-- ✅ Layout wrapper ENDS here -->
 
-  <!-- Footer -->
+<!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-container">
@@ -475,7 +579,6 @@
     </div>
   </footer>
 
-  <div id="google_translate_element"></div>
   <script src="script.js"></script>
 </body>
 </html>

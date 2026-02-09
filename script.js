@@ -6,7 +6,8 @@ function initHeader() {
 
   if (!mobileMenuBtn || !navMenu) return;
 
-  // Always start CLOSED on mobile
+  /* ================= MOBILE MENU TOGGLE ================= */
+
   navMenu.classList.remove("active");
   const iconInit = mobileMenuBtn.querySelector("i");
   if (iconInit) {
@@ -14,7 +15,6 @@ function initHeader() {
     iconInit.classList.add("fa-bars");
   }
 
-  // Mobile menu toggle
   mobileMenuBtn.addEventListener("click", function (e) {
     e.stopPropagation();
     navMenu.classList.toggle("active");
@@ -23,37 +23,75 @@ function initHeader() {
     if (!icon) return;
     icon.classList.toggle("fa-bars");
     icon.classList.toggle("fa-times");
+
+    // Close any open dropdowns when menu closes
+    if (!navMenu.classList.contains("active")) {
+      document
+        .querySelectorAll(".nav-dropdown.open")
+        .forEach(d => d.classList.remove("open"));
+    }
   });
 
-  // Close menu on outside click (mobile)
+  /* ================= OUTSIDE CLICK CLOSE ================= */
+
   document.addEventListener("click", function (e) {
     if (!navMenu.classList.contains("active")) return;
 
-    const clickedInsideMenu = navMenu.contains(e.target);
-    const clickedMenuBtn = mobileMenuBtn.contains(e.target);
-
-    if (!clickedInsideMenu && !clickedMenuBtn) {
+    if (
+      !navMenu.contains(e.target) &&
+      !mobileMenuBtn.contains(e.target)
+    ) {
       navMenu.classList.remove("active");
       const icon = mobileMenuBtn.querySelector("i");
       if (icon) {
         icon.classList.remove("fa-times");
         icon.classList.add("fa-bars");
       }
+      document
+        .querySelectorAll(".nav-dropdown.open")
+        .forEach(d => d.classList.remove("open"));
     }
   });
 
-  // ✅ Close menu on ANY nav click (important for page navigation)
+  /* ================= SMART NAV CLICK HANDLING ================= */
+
   document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", function () {
-      navMenu.classList.remove("active");
-      const icon = mobileMenuBtn.querySelector("i");
-      if (icon) {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
+    link.addEventListener("click", function (e) {
+      const isMobile = window.innerWidth <= 991;
+      const parentDropdown = this.closest(".nav-dropdown");
+      const isPrograms = this.classList.contains("dropdown-toggle");
+
+      // ✅ MOBILE + PROGRAMS
+      if (isMobile && isPrograms && parentDropdown) {
+        // FIRST TAP → open dropdown only
+        if (!parentDropdown.classList.contains("open")) {
+          e.preventDefault(); // 🚫 STOP PAGE NAVIGATION
+          parentDropdown.classList.add("open");
+          return;
+        }
+
+        // SECOND TAP → allow navigation to programs.html
+        parentDropdown.classList.remove("open");
+        navMenu.classList.remove("active");
+        return;
+      }
+
+      // ✅ NORMAL LINKS (mobile)
+      if (isMobile) {
+        navMenu.classList.remove("active");
+        const icon = mobileMenuBtn.querySelector("i");
+        if (icon) {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+        document
+          .querySelectorAll(".nav-dropdown.open")
+          .forEach(d => d.classList.remove("open"));
       }
     });
   });
 }
+
 
 /* ================= SMOOTH SCROLL ================= */
 
@@ -266,3 +304,19 @@ document.addEventListener("DOMContentLoaded", function () {
   initCounters();
   initJoinButton();
 });
+/* ================= HERO SLIDER ================= */
+
+function initHeroSlider() {
+  const slides = document.querySelectorAll(".hero-slide");
+  if (slides.length === 0) return;
+
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }, 3000); // ⏱ 3 seconds
+}
+
+document.addEventListener("DOMContentLoaded", initHeroSlider);

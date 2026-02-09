@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Detail | Lakshya Foundation</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery-bundle.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- ✅ Sidebar layout CSS (mobile first) -->
+  <style>
+    /* Wraps content + sidebar */
+    .layout-wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Mobile first: single column */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-top: 20px; /* small space after header */
+    }
+
+    /* Main site content */
+    .main-content {
+      width: 100%;
+      min-width: 0;
+    }
+
+    /* Sidebar */
+    .right-sidebar {
+      width: 100%;
+    }
+
+    /* Desktop layout: sidebar on right */
+    @media (min-width: 992px) {
+      .layout-grid {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 24px;
+      }
+    }
+
+    /* Sidebar UI */
+    .rs-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .rs-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #c00000;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rs-event {
+      padding-left: 10px;
+      border-left: 3px solid rgba(192, 0, 0, 0.25);
+      margin-bottom: 12px;
+    }
+
+    .rs-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .rs-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #c00000;
+    }
+
+    .rs-loc {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .rs-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rs-links li {
+      margin: 10px 0;
+    }
+
+    .rs-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .rs-links a:hover {
+      color: #c00000;
+    }
+
+    .rs-help p {
+      font-size: 14px;
+      margin: 8px 0;
+      color: #333;
+    }
+
+    .rs-help i {
+      color: #c00000;
+      margin-right: 6px;
+    }
+
+    /* Mobile: sidebar comes after content naturally */
+    @media (max-width: 991px) {
+      .right-sidebar {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container header-container">
+      <div class="header-left">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+        </div>
+        <div class="logo-text">
+          <img src="assets/logo2.png" alt="Lakshya Foundation Text">
+        </div>
+      </div>
+
+      <div class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">About Us</a></li>
+
+          <li class="has-mega-menu">
+            <a href="our-work.html" class="nav-link" data-i18n="nav_our_work">Our Work</a>
+            <div class="mega-menu">
+              <div class="mega-menu-column">
+                <h4 data-i18n="nav_core_sectors">Core Sectors</h4>
+                <ul class="mega-menu-links">
+                  <li><a href="education.html" data-i18n="nav_education">Education & Literacy</a></li>
+                  <li><a href="healthcare.html" data-i18n="nav_healthcare">Healthcare & Public Health</a></li>
+                  <li><a href="women-empowerment.html" data-i18n="nav_women">women-empowerment</a></li>
+                  <li><a href="child-welfare.html" data-i18n="nav_child">Child Welfare & Protection</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu-column">
+                <h4 data-i18n="nav_development_areas">Development Areas</h4>
+                <ul class="mega-menu-links">
+                  <li><a href="sports.html" data-i18n="nav_sports">Sports Support</a></li>
+                  <li><a href="rural-development.html" data-i18n="nav_rural">Rural Development</a></li>
+                  <li><a href="poverty.html" data-i18n="nav_poverty">Poverty Alleviation</a></li>
+                  <li><a href="disability.html" data-i18n="nav_disability">Disability Inclusion</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu-column">
+                <h4 data-i18n="nav_social_initiatives">Social Initiatives</h4>
+                <ul class="mega-menu-links">
+                  <li><a href="water-sanitation.html" data-i18n="nav_water">Water & Sanitation</a></li>
+                  <li><a href="disaster-relief.html" data-i18n="nav_disaster">Disaster Relief</a></li>
+                  <li><a href="human-rights.html" data-i18n="nav_human_rights">Human Rights</a></li>
+                  <li><a href="community.html" data-i18n="nav_community">Community Development</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu-column">
+                <h4 data-i18n="nav_get_involved">Get Involved</h4>
+                <ul class="mega-menu-links">
+                  <li><a href="donate.html" data-i18n="nav_donate">Donate</a></li>
+                  <li><a href="volunteer.html" data-i18n="nav_volunteer">Volunteer</a></li>
+                  <li><a href="partner.html" data-i18n="nav_partner">Partner With Us</a></li>
+                  <li><a href="programs.html" data-i18n="nav_view_programs">View All Programs</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-dropdown">
+            <a href="programs.html" class="nav-link dropdown-toggle" data-i18n="nav_programs">
+              Programs <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="program1.html">Program 1</a></li>
+              <li><a href="program2.html">Program 2</a></li>
+              <li><a href="program3.html">Program 3</a></li>
+            </ul>
+          </li>
+
+          <li><a href="csr.html" class="nav-link" data-i18n="nav_csr">CSR</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">Get Involved</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ✅ Hidden Google Translate (only once) -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en', includedLanguages: 'en,hi,mr', autoDisplay: false },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- ✅ ONE Layout wrapper only -->
+  <div class="layout-wrap">
+    <div class="layout-grid">
+
+      <!-- ✅ MAIN CONTENT -->
+      <div class="main-content">
+
+        <!-- 1. Program Overview -->
+        <section class="program-section">
+          <div class="container">
+            <div class="section-header">
+              <div class="section-number">1</div>
+              <h2 class="section-title"></h2>
+            </div>
+
+            <div class="section-content">
+              
+            </div>
+          </div>
+        </section>
+<!-- Gallery Section -->
+        <section class="section" id="gallery">
+          <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p style="text-align:center; max-width:700px; margin:0 auto 40px; color:#666;">
+              <br>
+              Moments from our work across education, healthcare, women empowerment, and community development.
+            </p>
+
+            <div class="gallery-grid">
+              <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d" alt=""></div>
+              <div class="gallery-item"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c" alt=""></div>
+              <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136" alt=""></div>
+              <div class="gallery-item"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt=""></div>
+              <div class="gallery-item"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt=""></div>
+              <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d" alt=""></div>
+              <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136" alt=""></div>
+              <div class="gallery-item"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c" alt=""></div>
+            </div>
+          </div>
+        </section>
+        <!-- ✅ add rest of your page sections here (2,3, etc) -->
+      </div>
+
+      <!-- ✅ RIGHT SIDEBAR -->
+      <aside class="right-sidebar">
+
+        <div class="rs-card">
+          <h3 class="rs-title"><i class="fa-solid fa-calendar-days"></i> Upcoming Events</h3>
+
+          <div class="rs-event">
+            <div class="rs-date">12 Feb 2026</div>
+            <div class="rs-name">Free Health Camp</div>
+            <div class="rs-loc">Pune, Maharashtra</div>
+          </div>
+
+          <div class="rs-event">
+            <div class="rs-date">25 Feb 2026</div>
+            <div class="rs-name">Women Empowerment Workshop</div>
+            <div class="rs-loc">Ahmednagar</div>
+          </div>
+
+          <div class="rs-event">
+            <div class="rs-date">10 Mar 2026</div>
+            <div class="rs-name">Education Awareness Drive</div>
+            <div class="rs-loc">Satara District</div>
+          </div>
+        </div>
+
+        <div class="rs-card">
+          <h3 class="rs-title"><i class="fa-solid fa-link"></i> Quick Links</h3>
+          <ul class="rs-links">
+            <li><a href="programs.html">Our Programs</a></li>
+            <li><a href="volunteer.html">Become a Volunteer</a></li>
+            <li><a href="donate.html">Donate Now</a></li>
+          </ul>
+        </div>
+
+        <div class="rs-card">
+          <h3 class="rs-title">Need Help?</h3>
+          <div class="rs-help">
+            <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> +91 9XXXXXXXXX</p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> info@lakshyafoundation.org</p>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Lakshya Foundation Logo">
+        </div>
+
+        <div class="footer-column">
+          <p>Empowering communities through sustainable development initiatives across 12 key sectors. Registered under the Maharashtra Public Trusts Act, 1950.</p>
+          <p style="margin-top: 15px;"><strong>Registration:</strong> F-15079</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Our Sectors</h3>
+          <ul class="footer-links">
+            <li><a href="education.html">Education & Literacy</a></li>
+            <li><a href="healthcare.html">Healthcare</a></li>
+            <li><a href="women-empowerment.html">Women Empowerment</a></li>
+            <li><a href="child-welfare.html">Child Welfare</a></li>
+            <li><a href="rural-development.html">Rural Development</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Get Involved</h3>
+          <ul class="footer-links">
+            <li><a href="donate.html">Donate Now</a></li>
+            <li><a href="volunteer.html">Volunteer With Us</a></li>
+            <li><a href="partner.html">Partner With Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#fundraise">Fundraise for a Cause</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Transparency</h3>
+          <ul class="footer-links">
+            <li><a href="#financials">Financial Statements</a></li>
+            <li><a href="#annual-reports">Annual Reports</a></li>
+            <li><a href="#policies">Policies & Disclosures</a></li>
+            <li><a href="#legal">Legal & Registration</a></li>
+            <li><a href="#grievance">Grievance Redressal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2026 Lakshya Foundation. All Rights Reserved.</p>
+        <p class="footer-credit">
+          Designed & Developed by
+          <a href="https://omnigross.in" target="_blank" rel="noopener">Omnigross</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

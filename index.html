@@ -224,21 +224,31 @@
             </div>
           </li>
 
-          <li><a href="programs.html" class="nav-link" data-i18n="nav_programs">Programs</a></li>
-          <li><a href="csr.html" class="nav-link" data-i18n="nav_csr">CSR</a></li>
-          <li><a href="impact.html" class="nav-link" data-i18n="nav_impact">Impact</a></li>
-          <li><a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">Get Involved</a></li>
-          <li><a href="transparency.html" class="nav-link" data-i18n="nav_transparency">Transparency</a></li>
-          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact Us</a></li>
+          <li class="nav-dropdown">
+  <a href="programs.html" class="nav-link dropdown-toggle" data-i18n="nav_programs">
+    Programs <i class="fas fa-chevron-down"></i>
+  </a>
 
-          <li class="lang-item">
-            <button type="button" id="langToggle" data-i18n="nav_language">Languages</button>
-            <ul class="lang-menu">
-              <li data-lang="en">English</li>
-              <li data-lang="hi">हिंदी</li>
-              <li data-lang="mr">मराठी</li>
-            </ul>
-          </li>
+  <ul class="dropdown-menu">
+    <li><a href="program1.html">Program 1</a></li>
+    <li><a href="program2.html">Program 2</a></li>
+    <li><a href="program3.html">Program 3</a></li>
+  </ul>
+</li>
+          <li><a href="csr.html" class="nav-link" data-i18n="nav_csr">CSR</a></li>
+          <!-- <li><a href="impact.html" class="nav-link" data-i18n="nav_impact">Impact</a></li> -->
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">Get Involved</a></li>
+          <!-- <li><a href="transparency.html" class="nav-link" data-i18n="nav_transparency">Transparency</a></li> -->
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact Us</a></li>
+          <!-- <li class="lang-item"><button type="button" id="langToggle">EN</button>
+  <ul class="lang-menu">
+    <li data-lang="en">English</li>
+    <li data-lang="hi">हिंदी</li>
+    <li data-lang="mr">मराठी</li>
+  </ul>
+</li> -->
+
 
         </ul>
       </nav>
@@ -259,29 +269,35 @@
   </script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+        <!-- Hero Section -->
+        <section class="hero hero-slider">
+  <div class="hero-slide active" style="background-image: url('assets/hero1.jpg');"></div>
+  <div class="hero-slide" style="background-image: url('assets/hero2.jpg');"></div>
+  <div class="hero-slide" style="background-image: url('assets/hero3.jpg');"></div>
+
+   <div class="hero-overlay">
+    <div class="container">
+     <!-- <h1>Empowering Communities, Transforming Lives</h1>
+      <p>
+        Lakshya Foundation is a non-profit organization dedicated to sustainable development.
+      </p>
+
+       <div class="hero-actions">
+        <a href="donate.html" class="btn btn-primary">Donate Now</a>
+        <a href="volunteer.html" class="btn btn-outline">Volunteer With Us</a>
+        <a href="partner.html" class="btn btn-outline">CSR Partnership</a>
+      </div> -->
+    </div> 
+  </div>
+</section>
+
+
   <!-- ✅ Layout Wrapper -->
   <div class="layout-wrap">
     <div class="layout-grid">
 
       <!-- ✅ LEFT CONTENT -->
       <div class="main-content">
-
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-          <div class="container">
-            <h1 data-i18n="hero_title">Empowering Communities, Transforming Lives</h1>
-            <p data-i18n="hero_desc">
-              Lakshya Foundation is a non-profit organization dedicated to sustainable development across 12 key sectors, driving social change through education, healthcare, women empowerment, and community development initiatives.
-            </p>
-
-            <div class="hero-btns">
-              <a href="donate.html" class="btn" data-i18n="hero_donate">Donate Now</a>
-              <a href="volunteer.html" class="btn btn-outline" data-i18n="hero_volunteer">Volunteer With Us</a>
-              <a href="partner.html" class="btn btn-outline" data-i18n="hero_csr">CSR Partnership</a>
-            </div>
-          </div>
-        </section>
-
         <!-- Key Focus Sectors -->
         <section class="section">
           <div class="container">
@@ -339,48 +355,37 @@
         </section>
 
         <section class="why-us-section">
-          <h2 class="section-title">Why Choose Lakshya Foundation</h2>
+  <div class="container">
+    <h2 class="section-title">Why Choose Lakshya Foundation</h2>
 
-          <div class="why-us-grid">
-            <div class="why-card">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&fit=crop" alt="Community Driven">
-              <h3>Community-Driven</h3>
-              <p>We work closely with local communities to ensure sustainable and inclusive development.</p>
-            </div>
+    <div class="why-us-grid">
+      <div class="why-card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&fit=crop" alt="Community Driven">
+        <h3>Community-Driven</h3>
+        <p>We work closely with local communities to ensure sustainable and inclusive development.</p>
+      </div>
 
-            <div class="why-card">
-              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&fit=crop" alt="Transparency">
-              <h3>Transparent & Accountable</h3>
-              <p>Clear reporting, audited finances, and measurable impact across all programs.</p>
-            </div>
+      <div class="why-card">
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&fit=crop" alt="Transparency">
+        <h3>Transparent & Accountable</h3>
+        <p>Clear reporting, audited finances, and measurable impact across all programs.</p>
+      </div>
 
-            <div class="why-card">
-              <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&fit=crop" alt="Proven Impact">
-              <h3>Proven Impact</h3>
-              <p>Over 25,000 lives impacted across education, healthcare, and rural development.</p>
-            </div>
+      <div class="why-card">
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&fit=crop" alt="Proven Impact">
+        <h3>Proven Impact</h3>
+        <p>Over 25,000 lives impacted across education, healthcare, and rural development.</p>
+      </div>
 
-            <div class="why-card">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&fit=crop" alt="Partnerships">
-              <h3>Strong Partnerships</h3>
-              <p>Collaborating with government bodies, CSR partners, and grassroots organizations.</p>
-            </div>
-          </div>
-        </section>
+      <div class="why-card">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&fit=crop" alt="Partnerships">
+        <h3>Strong Partnerships</h3>
+        <p>Collaborating with government bodies, CSR partners, and grassroots organizations.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section class="section" id="video">
-          <div class="container">
-            <h2 class="section-title">Our Story in Action</h2>
-            <div class="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/YZVAVxI7qnU"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-        </section>
 
         <!-- Flagship Programs -->
         <section class="section" style="background-color: var(--light-bg);">

@@ -13,33 +13,47 @@
 <link rel="stylesheet" href="assets/styles.css">
 
 <style>
-/* ===== LAYOUT ===== */
+/* ===== LAYOUT WRAP (single column page) ===== */
 .layout-wrap{
   max-width:1400px;
   margin:0 auto;
   padding:0 16px;
 }
-.layout-grid{
+.main-content{min-width:0;}
+
+/* ===== SIDEBAR (mobile-first grid) ===== */
+.right-sidebar{
+  width:100%;
   display:grid;
-  grid-template-columns:1fr;
-  gap:20px;
-  align-items:start;
+  grid-template-columns: 1fr;   /* ✅ mobile first */
+  gap:16px;
+  margin-bottom:18px;
 }
-@media(min-width:992px){
-  .layout-grid{
-    grid-template-columns:minmax(0,1fr) 320px;
-    gap:24px;
+
+/* ✅ tablet: 2 columns */
+@media (min-width: 768px){
+  .right-sidebar{
+    grid-template-columns: 1fr 1fr;
   }
 }
-.main-content{min-width:0;}
-.right-sidebar{width:100%;}
 
-/* ===== SIDEBAR ===== */
+/* ✅ desktop: 3 columns (3 sections) */
+@media (min-width: 1200px){
+  .right-sidebar{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* remove any last-child full width rule if you had it */
+.right-sidebar .rs-card:last-child{
+  grid-column: auto;
+}
+
+
 .rs-card{
   background:#fff;
   border-radius:14px;
   padding:16px;
-  margin-bottom:16px;
   box-shadow:0 6px 16px rgba(0,0,0,.08);
 }
 .rs-title{
@@ -187,26 +201,30 @@
           </div>
         </li>
 
-        <li><a href="programs.html" class="nav-link" data-i18n="nav_programs">Programs</a></li>
+        <li class="nav-dropdown">
+  <a href="programs.html" class="nav-link dropdown-toggle" data-i18n="nav_programs">
+    Programs <i class="fas fa-chevron-down"></i>
+  </a>
 
-        <li><a href="csr.html" class="nav-link" data-i18n="nav_csr">CSR</a></li>
-
-        <li><a href="impact.html" class="nav-link" data-i18n="nav_impact">Impact</a></li>
-
-        <li><a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">Get Involved</a></li>
-
-        <li><a href="transparency.html" class="nav-link" data-i18n="nav_transparency">Transparency</a></li>
-
-        <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact Us</a></li>
-
-        <li class="lang-item">
-          <button type="button" id="langToggle" data-i18n="nav_language">Languages</button>
-          <ul class="lang-menu">
-            <li data-lang="en">English</li>
-            <li data-lang="hi">हिंदी</li>
-            <li data-lang="mr">मराठी</li>
-          </ul>
-        </li>
+  <ul class="dropdown-menu">
+    <li><a href="program1.html">Program 1</a></li>
+    <li><a href="program2.html">Program 2</a></li>
+    <li><a href="program3.html">Program 3</a></li>
+  </ul>
+</li>
+          <li><a href="csr.html" class="nav-link" data-i18n="nav_csr">CSR</a></li>
+          <!-- <li><a href="impact.html" class="nav-link" data-i18n="nav_impact">Impact</a></li> -->
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="get-involved.html" class="nav-link" data-i18n="nav_get_involved">Get Involved</a></li>
+          <!-- <li><a href="transparency.html" class="nav-link" data-i18n="nav_transparency">Transparency</a></li> -->
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact Us</a></li>
+          <!-- <li class="lang-item"><button type="button" id="langToggle">EN</button>
+  <ul class="lang-menu">
+    <li data-lang="en">English</li>
+    <li data-lang="hi">हिंदी</li>
+    <li data-lang="mr">मराठी</li>
+  </ul>
+</li> -->
       </ul>
     </nav>
   </div>
@@ -215,94 +233,85 @@
 <div id="google_translate_element" style="padding:10px;"></div>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<!-- ===== CONTENT + SIDEBAR STARTS FROM HEADER ===== -->
+<!-- HERO (UNCHANGED) -->
+<section class="contact-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Have a question, want to volunteer, or interested in CSR partnership? Reach out — our team will get back to you.</p>
+  </div>
+</section>
+
+<!-- PAGE CONTENT -->
 <div class="layout-wrap">
-  <div class="layout-grid">
+  <main class="main-content">
 
-    <!-- LEFT -->
-    <main class="main-content">
-
-      <!-- HERO (UNCHANGED, JUST MOVED) -->
-      <section class="contact-hero">
-        <div class="container">
-          <h1>Contact Us</h1>
-          <p>Have a question, want to volunteer, or interested in CSR partnership? Reach out — our team will get back to you.</p>
+    <div class="contact-card">
+      <h2>Send Us a Message</h2>
+      <form>
+        <div class="form-row two">
+          <div class="field">
+            <label>Full Name</label>
+            <input placeholder="Your name">
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input placeholder="+91 XXXXX XXXXX">
+          </div>
         </div>
-      </section>
 
-      <div class="contact-card">
-        <h2>Send Us a Message</h2>
-        <form>
-          <div class="form-row two">
-            <div class="field">
-              <label>Full Name</label>
-              <input placeholder="Your name">
-            </div>
-            <div class="field">
-              <label>Phone</label>
-              <input placeholder="+91 XXXXX XXXXX">
-            </div>
+        <div class="form-row two">
+          <div class="field">
+            <label>Email</label>
+            <input placeholder="you@example.com">
           </div>
-
-          <div class="form-row two">
-            <div class="field">
-              <label>Email</label>
-              <input placeholder="you@example.com">
-            </div>
-            <div class="field">
-              <label>I’m contacting about</label>
-              <select>
-                <option>General Enquiry</option>
-                <option>Donation</option>
-                <option>Volunteering</option>
-                <option>CSR Partnership</option>
-              </select>
-            </div>
+          <div class="field">
+            <label>I’m contacting about</label>
+            <select>
+              <option>General Enquiry</option>
+              <option>Donation</option>
+              <option>Volunteering</option>
+              <option>CSR Partnership</option>
+            </select>
           </div>
-
-          <div class="form-row">
-            <div class="field">
-              <label>Message</label>
-              <textarea placeholder="Write your message..."></textarea>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button class="btn">Send Message</button>
-            <a class="btn btn-outline" href="donate.html">Donate Instead</a>
-          </div>
-        </form>
-      </div>
-
-      <div class="contact-card">
-        <h2>Visit Us</h2>
-        <div class="map-box">
-          <iframe src="https://www.google.com/maps?q=Pune%20Maharashtra&output=embed"></iframe>
         </div>
-      </div>
 
-    </main>
+        <div class="form-row">
+          <div class="field">
+            <label>Message</label>
+            <textarea placeholder="Write your message..."></textarea>
+          </div>
+        </div>
 
-    <!-- SIDEBAR (UNCHANGED) -->
+        <div class="form-actions">
+          <button class="btn">Send Message</button>
+          <a class="btn btn-outline" href="donate.html">Donate Instead</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- ✅ SIDEBAR SECTION (NOW 2-COLUMN GRID) -->
     <aside class="right-sidebar">
       <div class="rs-card">
         <h3 class="rs-title"><i class="fa-solid fa-calendar-days"></i> Upcoming Events</h3>
+
         <div class="rs-event">
           <div class="rs-date">12 Feb 2026</div>
           <div class="rs-name">Free Health Camp</div>
           <div class="rs-loc">Pune, Maharashtra</div>
         </div>
+
         <div class="rs-event">
           <div class="rs-date">25 Feb 2026</div>
           <div class="rs-name">Women Empowerment Workshop</div>
           <div class="rs-loc">Ahmednagar</div>
         </div>
+
         <div class="rs-event">
           <div class="rs-date">10 Mar 2026</div>
           <div class="rs-name">Education Awareness Drive</div>
           <div class="rs-loc">Satara District</div>
         </div>
-      
+      </div>
 
       <div class="rs-card">
         <h3 class="rs-title"><i class="fa-solid fa-link"></i> Quick Links</h3>
@@ -320,7 +329,14 @@
       </div>
     </aside>
 
-  </div>
+    <div class="contact-card">
+      <h2>Visit Us</h2>
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps?q=Pune%20Maharashtra&output=embed"></iframe>
+      </div>
+    </div>
+
+  </main>
 </div>
 
 <!-- Footer (UNCHANGED) -->
@@ -386,6 +402,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>

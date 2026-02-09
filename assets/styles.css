@@ -256,16 +256,15 @@
             cursor: pointer;
         }
         
-        /* Hero Section */
-        .hero {
+         /* Hero Section */
+        /*.hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
             color: var(--white);
             padding: 100px 20px;
             text-align: center;
-        }
-        
+        }*/
         .hero h1 {
             font-size: 3rem;
             color: var(--white);
@@ -3926,3 +3925,653 @@ body {
     padding: 22px 16px !important;
   }
 }
+/* =========================================================
+   FINAL HEADER / NAV OVERRIDE (ONLY HEADER)
+   Fixes spacing + prevents nav text from mixing
+   Paste at VERY END of styles.css
+========================================================= */
+
+/* Keep header layout stable */
+header .header-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Desktop / Tablet nav spacing (prevents "HomeAboutUs..." mix) */
+@media (min-width: 769px){
+  header .nav-menu{
+    display:flex !important;
+    align-items:center !important;
+    flex-wrap:nowrap !important;
+    gap:25px !important;              /* ✅ same spacing between all items */
+  }
+
+  header .nav-menu > li{
+    margin:0 !important;
+    padding:0 !important;
+    white-space:nowrap !important;
+  }
+
+  /* ✅ FIX ONLY the extra space before Languages */
+  header .nav-menu > li.lang-item{
+    margin-left:0 !important;         /* remove any extra margin */
+    padding-left:0 !important;
+  }
+
+  /* Make Languages button behave like other links (no extra padding) */
+  header #langToggle{
+    padding:5px 0 !important;         /* same feel as .nav-link */
+    margin:0 !important;
+  }
+}
+
+/* Mobile menu stays as your existing behavior (no change) */
+@media (max-width: 768px){
+  header .nav-menu{
+    gap:0 !important;                 /* in mobile menu vertical list */
+  }
+}
+/* FIX: remove tiny gap before Home (desktop only) */
+@media (min-width: 992px) {
+  header nav {
+    margin-left: -25px;
+  }
+}
+/* ==========================
+   MOBILE MENU LOOK FIX ONLY
+   (does NOT affect desktop)
+========================== */
+@media (max-width: 768px) {
+
+  /* mobile menu panel */
+  .nav-menu.active {
+    padding: 22px 18px 28px !important;
+  }
+
+  /* make items left aligned + clean */
+  .nav-menu > li {
+    width: 100% !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nav-menu .nav-link,
+  #langToggle {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 14px !important;
+    border-radius: 12px !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* subtle separation between items */
+  .nav-menu .nav-link {
+    border: 1px solid rgba(0,0,0,0.06) !important;
+    background: #fff !important;
+  }
+
+  /* hover/tap feel */
+  .nav-menu .nav-link:active,
+  #langToggle:active {
+    background: rgba(211,47,47,0.08) !important;
+  }
+
+  /* keep active underline nice on mobile */
+  .nav-menu .nav-link.active::after {
+    left: 14px !important;
+    width: calc(100% - 28px) !important;
+  }
+
+  /* languages button same as others */
+  .lang-item {
+    width: 100% !important;
+  }
+
+  /* dropdown inside mobile menu nicely */
+  .lang-menu {
+    position: static !important;
+    margin: 10px 0 0 !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0,0,0,0.06) !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+
+  .lang-menu li {
+    padding: 12px 14px !important;
+  }
+}
+
+/* ===== WHY US SECTION (2x2 professional grid) ===== */
+.why-us-section {
+  padding: 60px 0;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 on top, 2 on bottom */
+  gap: 28px; /* perfect professional spacing */
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+.why-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.why-card h3 {
+  margin: 18px 18px 10px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.why-card p {
+  margin: 0 18px 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Hover (desktop only feel) */
+@media (hover: hover) {
+  .why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .why-us-grid {
+    gap: 20px;
+  }
+  .why-card img {
+    height: 190px;
+  }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 600px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-card img {
+    height: 200px;
+  }
+}
+/* ===== PARTNERS SECTION (3 x 2 GRID) ===== */
+.partners-section {
+  padding: 60px 0;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 up, 3 down */
+  gap: 28px;
+  margin-top: 35px;
+}
+
+.partner-item {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partner-item i {
+  font-size: 42px;
+  color: #d32f2f; /* your red theme */
+  margin-bottom: 16px;
+  display: block;
+}
+
+.partner-item h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Hover effect */
+@media (hover: hover) {
+  .partner-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+/* ===== EDUCATION: KEY PROGRAMS (2 x 2 GRID) ===== */
+.key-programs .programs-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 up, 2 down */
+  gap: 28px;
+  margin-top: 35px;
+  align-items: stretch;
+}
+
+/* keep cards same height */
+.key-programs .program-card{
+  height: 100%;
+}
+
+/* Tablet: still 2 columns */
+@media (max-width: 992px){
+  .key-programs .programs-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px){
+  .key-programs .programs-grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+/* ===== ABOUT PAGE: IMPACT PHILOSOPHY (2 x 2 GRID) ===== */
+
+.impact-philosophy .impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 up, 2 down */
+  gap: 32px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+/* Equal height cards */
+.impact-philosophy .impact-card {
+  height: 100%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .impact-philosophy .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .impact-philosophy .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+/* ===== FLAGSHIP PROGRAMS (2 x 2 GRID FIX) ===== */
+
+.flagship-programs .programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* force 2 per row */
+  gap: 32px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+/* Equal height cards */
+.flagship-programs .program-card {
+  height: 100%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .flagship-programs .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .flagship-programs .programs-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+/* ===== 2 x 2 GRID FIX (Transparency + M&E + Roadmap) ===== */
+
+/* 2 columns on desktop */
+.section .impact-grid,
+.core-values .values-grid,
+.transparency .impact-grid,
+.monitoring-evaluation .me-grid,
+.roadmap .roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+/* Make cards equal height */
+.section .impact-card,
+.core-values .value-card,
+.transparency .impact-card,
+.monitoring-evaluation .me-card,
+.roadmap .roadmap-card {
+  height: 100%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .section .impact-grid,
+  .core-values .values-grid,
+  .transparency .impact-grid,
+  .monitoring-evaluation .me-grid,
+  .roadmap .roadmap-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .section .impact-grid,
+  .core-values .values-grid,
+  .transparency .impact-grid,
+  .monitoring-evaluation .me-grid,
+  .roadmap .roadmap-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+/* ===== OUR WORK – KEY FOCUS AREAS (4 UP + 4 DOWN) ===== */
+
+.icon-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+/* Card consistency */
+.icon-cards .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Tablet: 2 cards per row */
+@media (max-width: 1024px) {
+  .icon-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+  .icon-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+.gallery-tabs{
+  display:flex;
+  gap:12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.tab-btn{
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tab-btn.active{
+  border-color: var(--primary-red);
+  color: var(--primary-red);
+}
+
+.gallery-content{
+  display:none;
+}
+
+.gallery-content.active{
+  display:block;
+}
+
+/* Responsive video */
+.video-container{
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-container iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+/* FORCE 2 up – 2 down layout */
+.doc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 28px !important;
+}
+
+/* Document card styling (safe override) */
+.doc-item {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Icon */
+.doc-icn {
+  font-size: 2.2rem;
+  color: #d62828; /* or var(--primary-red) */
+  flex-shrink: 0;
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 768px) {
+  .doc-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ================= PROGRAMS DROPDOWN ================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 6px;
+  padding: 8px 0;
+  display: none;
+  z-index: 999;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: #f5f5f5;
+  color: #d32f2f;
+}
+
+/* Desktop hover */
+@media (min-width: 992px) {
+  .nav-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Chevron icon */
+.dropdown-toggle i {
+  font-size: 0.7rem;
+  margin-left: 4px;
+}
+/* ===== Programs dropdown (mobile friendly) ===== */
+
+/* Desktop: keep your dropdown absolute */
+.nav-dropdown { position: relative; }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 6px;
+  padding: 8px 0;
+  display: none;
+  z-index: 999;
+}
+
+/* Desktop hover */
+@media (min-width: 992px) {
+  .nav-dropdown:hover .dropdown-menu { display: block; }
+}
+
+/* Mobile: dropdown should be INSIDE the opened menu list */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 0;
+    min-width: 100%;
+    padding: 6px 0 0;
+    display: none;
+  }
+
+  .nav-dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    padding: 10px 16px 10px 28px; /* indent */
+  }
+}
+/* ================= HERO SLIDER ================= */
+
+.hero-slider {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+/* ================= HERO SLIDER IMAGE FIX ================= */
+
+/* Default (Desktop & Tablet) */
+.hero-slide {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Mobile-first optimization */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 90vh; /* better mobile height */
+  }
+
+  .hero-slide {
+    background-size: contain; /* show full image */
+    background-position: center top;
+    background-color: #000; /* fills empty space neatly */
+  }
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.55); /* better text readability */
+    padding-top: 80px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .hero-slider {
+    height: 85vh;
+  }
+
+  .hero-slide {
+    background-position: center center;
+  }
+}
+
+
+/*.hero-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(11, 11, 11, 0.45); /* readability 
+.hero-overlay h1,
+.hero-overlay p {
+  color: #fff;
+} 
+*/
