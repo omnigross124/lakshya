@@ -149,6 +149,21 @@
 .hc-cover img{
   object-fit: cover;
 }
+/* ✅ Instagram Reels scroll box inside sidebar */
+.ig-scroll{
+  max-height: 560px;      /* same vibe as facebook scroller */
+  overflow-y: auto;
+  padding-right: 6px;     /* tiny space so scrollbar doesn’t touch */
+}
+
+/* Optional: cleaner scrollbar (works in Chrome/Edge) */
+.ig-scroll::-webkit-scrollbar{
+  width: 8px;
+}
+.ig-scroll::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.15);
+  border-radius: 999px;
+}
 
 </style>
 </head>
@@ -1644,6 +1659,32 @@
             <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> info@lakshyafoundation.org</p>
           </div>
         </div>
+        <!-- ✅ Instagram Reels (Scrollable) -->
+<div class="rs-card">
+  <h3 class="rs-title"><i class="fa-brands fa-instagram"></i> Instagram Reels</h3>
+
+  <div class="ig-scroll">
+    <!-- ✅ Replace these 3 links with your REAL reel URLs -->
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID_1/"
+      data-instgrm-version="14"
+      style="width:100%; margin:0 0 14px; background:#fff;">
+    </blockquote>
+
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID_2/"
+      data-instgrm-version="14"
+      style="width:100%; margin:0 0 14px; background:#fff;">
+    </blockquote>
+
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/reel/REEL_ID_3/"
+      data-instgrm-version="14"
+      style="width:100%; margin:0; background:#fff;">
+    </blockquote>
+  </div>
+</div>
+
 
       </aside>
 
@@ -1818,6 +1859,7 @@ document.getElementById("donateBtn").addEventListener("click", function () {
   window.location.href = "donate.html";
 });
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 
 <script src="script.js"></script>
 </body>

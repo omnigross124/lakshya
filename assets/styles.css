@@ -715,8 +715,13 @@
 .about-hero {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+  min-height: 60vh;   /* 👈 IMPORTANT */
+  display: flex;
+  align-items: center;
 }
+
 
 .about-hero::before {
   content: "";
@@ -4575,55 +4580,131 @@ header .header-container{
   color: #fff;
 } 
 */
-/* ================= CTA BUTTON FIX (Donate & Volunteer) ================= */
 
-.hero .btn,
-.get-involved .btn,
-.cta-section .btn {
+/* ===== Fix CTA buttons (Donate + Volunteer same size) ===== */
+.cta-actions{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Force SAME size for both buttons */
+.cta-actions .btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  min-width: 180px;        /* SAME WIDTH */
-  height: 52px;            /* SAME HEIGHT */
+  height: 56px;            /* same height */
+  min-width: 240px;        /* same width */
+  padding: 0 28px;         /* same inner spacing */
 
-  padding: 0 28px;         /* horizontal only */
-  font-size: 16px;
+  border-radius: 10px;
   font-weight: 600;
   line-height: 1;
+  box-sizing: border-box;
+  text-align: center;
+  white-space: nowrap;
+}
 
-  border-radius: 8px;
-  border: 2px solid #fff;
+/* Primary stays filled */
+.cta-actions .primary-btn{
+  background: #ffffff;
+  color: #c00000;
+  border: 2px solid #ffffff;
+}
 
+/* Outline stays outlined but SAME sizing */
+.cta-actions .outline-btn{
   background: transparent;
-  color: #fff;
-
-  text-decoration: none;
-  transition: all 0.3s ease;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 /* Hover effect */
-.hero .btn:hover,
-.get-involved .btn:hover,
-.cta-section .btn:hover {
-  background: #fff;
-  color: #d32f2f;
+.cta-actions .primary-btn:hover{
+  background: transparent;
+  color: #ffffff;
 }
 
-/* Button wrapper spacing */
-.hero .btn + .btn {
-  margin-left: 16px;
+.cta-actions .outline-btn:hover{
+  background: #ffffff;
+  color: #c00000;
 }
 
-/* Mobile: stack neatly */
-@media (max-width: 768px) {
-  .hero .btn {
+/* Mobile: stack full width nicely */
+@media (max-width: 600px){
+  .cta-actions{
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-actions .btn{
     width: 100%;
-    max-width: 260px;
+    max-width: 320px;
+    min-width: 0;
+  }
+}
+/* ===== CTA BUTTON ALIGNMENT FIX ===== */
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;   /* 🔥 THIS fixes vertical mismatch */
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Same size buttons */
+.cta-actions .btn {
+  display: flex;         /* 🔥 not inline-flex */
+  align-items: center;   /* vertical centering */
+  justify-content: center;
+
+  height: 56px;
+  min-width: 240px;
+  padding: 0 28px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;        /* 🔥 critical */
+  box-sizing: border-box;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+/* Primary */
+.cta-actions .primary-btn {
+  background: #ffffff;
+  color: #c00000;
+  border: 2px solid #ffffff;
+}
+
+/* Outline */
+.cta-actions .outline-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* Hover */
+.cta-actions .primary-btn:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.cta-actions .outline-btn:hover {
+  background: #ffffff;
+  color: #c00000;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cta-actions {
+    flex-direction: column;
   }
 
-  .hero .btn + .btn {
-    margin-left: 0;
-    margin-top: 14px;
+  .cta-actions .btn {
+    width: 100%;
+    max-width: 320px;
   }
 }
