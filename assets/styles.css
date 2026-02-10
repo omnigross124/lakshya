@@ -4575,3 +4575,55 @@ header .header-container{
   color: #fff;
 } 
 */
+/* ================= CTA BUTTON FIX (Donate & Volunteer) ================= */
+
+.hero .btn,
+.get-involved .btn,
+.cta-section .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;        /* SAME WIDTH */
+  height: 52px;            /* SAME HEIGHT */
+
+  padding: 0 28px;         /* horizontal only */
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+
+  border-radius: 8px;
+  border: 2px solid #fff;
+
+  background: transparent;
+  color: #fff;
+
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.hero .btn:hover,
+.get-involved .btn:hover,
+.cta-section .btn:hover {
+  background: #fff;
+  color: #d32f2f;
+}
+
+/* Button wrapper spacing */
+.hero .btn + .btn {
+  margin-left: 16px;
+}
+
+/* Mobile: stack neatly */
+@media (max-width: 768px) {
+  .hero .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .hero .btn + .btn {
+    margin-left: 0;
+    margin-top: 14px;
+  }
+}
