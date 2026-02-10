@@ -126,6 +126,31 @@
       }
     }
   </style>
+  <style>/* Base wrapper for all healthcare images */
+.hc-media{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;          /* optional */
+  background: #f3f4f6;          /* looks good when using contain */
+}
+
+/* Make the image fill the wrapper */
+.hc-media img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-position: center;
+}
+
+/* Aspect ratio presets (use one based on section) */
+.hc-16x9{ aspect-ratio: 16 / 9; }
+.hc-4x3{ aspect-ratio: 4 / 3; }
+.hc-1x1{ aspect-ratio: 1 / 1; }
+.hc-cover img{
+  object-fit: cover;
+}
+
+</style>
 </head>
 <body>
 
@@ -261,7 +286,7 @@
     <!-- Left Image -->
     <div class="hero-image">
       <img 
-        src="https://images.unsplash.com/photo-1584515933487-779824d29309" 
+        src="assets/healthcare.jpg" 
         alt="Community Healthcare Support">
     </div>
 
@@ -327,7 +352,7 @@
     <!-- Image -->
     <div class="image-wrap">
       <img 
-        src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80"
+        src="assets/healthcare1.jpg"
         alt="Community healthcare program by Lakshya Foundation"
         loading="lazy">
     </div>
@@ -451,7 +476,7 @@
 <section class="section impact-section">
   <div class="container two-col">
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1584516150909-c43483ee7932?q=80&w=1200" alt="Primary healthcare services">
+      <img src="assets/hc8.jpeg" alt="Primary healthcare services">
     </div>
 
     <div class="content-wrap">
@@ -511,7 +536,7 @@
     </div>
 
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1583321500900-82807e458f3c?q=80&w=1200" alt="Mobile health clinic">
+      <img src="assets/mobile.jpeg" alt="Mobile health clinic">
     </div>
   </div>
 </section>
@@ -559,7 +584,7 @@
 <section class="section impact-section">
   <div class="container two-col">
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?q=80&w=1200" alt="Maternal and child health">
+      <img src="assets/maternal.jpeg" alt="Maternal and child health">
     </div>
 
     <div class="content-wrap">
@@ -617,7 +642,7 @@
     </div>
 
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde" alt="Nutrition and malnutrition support">
+      <img src="assets/nutrition.jpeg" alt="Nutrition and malnutrition support">
     </div>
   </div>
 </section>
@@ -665,7 +690,7 @@
 <section class="section impact-section">
   <div class="container two-col">
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1200" alt="Mental health counselling">
+      <img src="assets/heath.jpg" alt="Mental health counselling">
     </div>
 
     <div class="content-wrap">
@@ -722,7 +747,7 @@
     </div>
 
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1200" alt="Emergency medical support">
+      <img src="assets/checkup.jpeg" alt="Emergency medical support">
     </div>
   </div>
 </section>
@@ -770,7 +795,7 @@
 <section class="section impact-section">
   <div class="container two-col">
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=1200" alt="Telemedicine consultations">
+      <img src="assets/healthcare2.jpeg" alt="Telemedicine consultations">
     </div>
 
     <div class="content-wrap">
@@ -828,7 +853,7 @@
     </div>
 
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200" alt="Women's health program">
+      <img src="assets/women1.jpeg" alt="Women's health program">
     </div>
   </div>
 </section>
@@ -876,7 +901,7 @@
 <section class="section impact-section">
   <div class="container two-col">
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1512675828443-4f454c42253a?q=80&w=1200" alt="Elderly care support">
+      <img src="assets/elder.jpg" alt="Elderly care support">
     </div>
 
     <div class="content-wrap">
@@ -933,7 +958,7 @@
     </div>
 
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200" alt="Rehabilitation support">
+      <img src="assets/healthcare3.jpg" alt="Rehabilitation support">
     </div>
   </div>
 </section>
@@ -981,7 +1006,7 @@
 <section class="section impact-section">
   <div class="container two-col">
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200" alt="Hospital and doctor partnerships">
+      <img src="assets/doctor.jpeg" alt="Hospital and doctor partnerships">
     </div>
 
     <div class="content-wrap">
@@ -1038,7 +1063,7 @@
     </div>
 
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=1200" alt="Community health workers training">
+      <img src="assets/doctor1.jpeg" alt="Community health workers training">
     </div>
   </div>
 </section>
@@ -1086,7 +1111,7 @@
 <section class="section impact-section">
   <div class="container two-col">
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1584516150909-c43483ee7932" alt="Patient stories and case studies">
+      <img src="assets/checkup.jpeg" alt="Patient stories and case studies">
     </div>
 
     <div class="content-wrap">
@@ -1151,7 +1176,7 @@
     </div>
 
     <div class="image-wrap">
-      <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12" alt="Monitoring evaluation and research">
+      <img src="assets/healthcare8.jpeg" alt="Monitoring evaluation and research">
     </div>
   </div>
 </section>
@@ -1262,7 +1287,7 @@
   <div class="container two-col">
     <div class="image-wrap">
      <img 
-  src="https://images.unsplash.com/photo-1583321500900-82807e458f3c?q=80&w=1000" 
+  src="assets/doctor2.jpeg" 
   alt="Mobile Medical Unit serving rural communities">
 
     </div>
@@ -1334,7 +1359,7 @@
     <!-- IMAGE -->
     <div class="image-wrap">
       <img 
-        src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?q=80&w=1200" 
+        src="assets/maternity.jpg" 
         alt="Maternal healthcare support for pregnant women">
     </div>
 
@@ -1442,7 +1467,7 @@
     <!-- IMAGE -->
     <div class="image-wrap">
       <img 
-        src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1200" 
+        src="assets/checkup.jpeg" 
         alt="Emergency medical support and ambulance service">
     </div>
 
@@ -1529,35 +1554,35 @@
 
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309" alt="Medical camp">
+        <img src="assets/gallery.jpeg" alt="Medical camp">
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde" alt="Doctor examining patient">
+        <img src="assets/gallery1.jpeg" alt="Doctor examining patient">
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1584516150909-c43483ee7932" alt="Healthcare awareness session">
+        <img src="assets/gallery2.jpeg" alt="Healthcare awareness session">
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Mobile medical unit">
+        <img src="assets/hc1.jpeg" alt="Mobile medical unit">
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12" alt="Health checkup camp">
+        <img src="assets/hc5.JPG" alt="Health checkup camp">
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1584516150909-c43483ee7932" alt="Doctor consultation">
+        <img src="assets/hc8.jpeg" alt="Doctor consultation">
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12" alt="Community healthcare support">
+        <img src="assets/checkup.jpeg" alt="Community healthcare support">
       </div>
 
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Healthcare volunteers">
+        <img src="assets/gallery3.jpeg" alt="Healthcare volunteers">
       </div>
     </div>
   </div>
